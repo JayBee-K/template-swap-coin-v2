@@ -394,7 +394,7 @@
     <div class="header-overlay"></div>
 </header>
 <div class="main">
-    <div class="section-page page-detail_article">
+    <div class="section-page page-wallet">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -404,114 +404,523 @@
                                 <a href="#">Trang chủ</a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="#">Blog</a>
+                                <a href="#">Wallet</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Cơ hội kinh doanh mới</li>
+                            <li class="breadcrumb-item active" aria-current="page">P2P</li>
                         </ol>
                     </div>
                 </div>
-                <div class="col-md-9">
-                    <div class="detail-article_inner">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="detail-article_title">
-                                    <h1>
-                                        Cơ hội kinh doanh mới
-                                    </h1>
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h1 class="heading-title mb-0">
+                            P2P Table
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="wallet-inner">
+                        <div class="wallet-header">
+                            <div class="wallet-tab">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#table-tab_usdt">
+                                            <img src="./assets/images/coins/usdt.png" alt="">
+                                            USDT
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#table-tab_ytc">
+                                            <img src="./assets/images/coins/etherum.png" alt="">
+                                            YTC
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#table-tab_bitcoin">
+                                            <img src="./assets/images/coins/bitcoin.png" alt="">
+                                            BITCOIN
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="wallet-button">
+                                    <a href="" class="wallet-button_style">
+                                        Create Buy/Sell advertisement
+                                    </a>
                                 </div>
-                                <div class="detail-article_meta">
-                                    <span class="meta-category">Danh mục:
-                                        <a href="">Blog</a>
-                                    </span>
-                                    <span>Ngày đăng: 02-01-2022</span>
-                                    <span>Lượt xem: 195</span>
+                            </div>
+                            <div class="wallet-filter">
+                                <form action="">
+                                    <div class="filter-inner">
+                                        <div class="filter-item">
+                                            <label>
+                                                Thị Trường Giao Dịch:
+                                            </label>
+                                            <select name="" class="form-control" id="">
+                                                <option value="-1">Tất cả</option>
+                                                <option value="">BTC/USDT</option>
+                                                <option value="">ETH/USDT</option>
+                                                <option value="">CRV/USDT</option>
+                                                <option value="">DOT/USDT</option>
+                                                <option value="">ATOM/USDT</option>
+                                                <option value="">FLUX/USDT</option>
+                                                <option value="">DOGE/USDT</option>
+                                                <option value="">SOS/USDT</option>
+                                                <option value="">BNB/USDT</option>
+                                                <option value="">SUSHI/USDT</option>
+                                                <option value="">XRP/USDT</option>
+                                                <option value="">AVAX/USDT</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="filter-item">
+                                            <label>
+                                                Loại chiến lược
+                                            </label>
+                                            <select name="" class="form-control" id="">
+                                                <option value="-1">Tất cả</option>
+                                                <option value="">Giao dịch lưới thường</option>
+                                                <option value="">Lưới hợp đồng</option>
+                                                <option value="">Giao dịch lưới vô hạn</option>
+                                                <option value="">Margin grid</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="filter-item">
+                                            <label>
+                                                Thời gian vận hành:
+                                            </label>
+                                            <select name="" class="form-control" id="">
+                                                <option value="-1">Tất cả</option>
+                                                <option value="">≤1 ngày</option>
+                                                <option value="">≤3 ngày</option>
+                                                <option value="">≤5 ngày</option>
+                                                <option value="">≤7 ngày</option>
+                                                <option value="">≤15 ngày</option>
+                                                <option value="">≤1 tháng</option>
+                                                <option value="">≤3 tháng</option>
+                                                <option value="">≤6 tháng</option>
+                                                <option value="">≤1 năm</option>
+                                            </select>
+                                        </div>
+                                        <div class="filter-item">
+                                            <label>
+                                                Ngân hàng
+                                            </label>
+                                            <select name="" class="form-control" id="">
+                                                <option value="-1">Tất cả</option>
+                                                <option value="">Vietcombank</option>
+                                                <option value="">BIDV</option>
+                                                <option value="">Argibank</option>
+                                                <option value="">Viettinbank</option>
+                                                <option value="">TPBank</option>
+                                                <option value="">Sacombank</option>
+                                                <option value="">MBBank</option>
+                                                <option value="">Đông Á Bank</option>
+                                                <option value="">Techcombank</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="filter-item">
+                                            <label>
+                                                Tìm kiếm
+                                            </label>
+                                            <input type="text" class="form-control" placeholder="Nội dung tìm kiếm">
+                                        </div>
+                                        <div class="filter-item filter-button">
+                                            <button>Tra cứu <i class="fal fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="table-tab_usdt">
+                                <div class="wallet-table">
+                                    <div class="table-responsive">
+                                        <table class="table-theme">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: 30%">
+                                                    Advertisers
+                                                </th>
+                                                <th style="width: 10%">
+                                                    Price
+                                                </th>
+                                                <th style="width: 30%">
+                                                    Limit/Available
+                                                </th>
+                                                <th style="width: 14%; text-align: center;">
+                                                    Payment
+                                                </th>
+                                                <th style="width: 16%; text-align: center;">
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        Trade <label class="table-label_success">0 Fee</label>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        EXCHANGE AM
+                                                    </div>
+                                                    322 lệnh | 99.38% hoàn tất
+                                                </td>
+                                                <td class="table-color_danger">
+                                                    100.000 <sup>đ</sup>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        <span>Available:</span>
+                                                        372.74 USDT
+                                                    </div>
+                                                    <div class="table-content_title">
+                                                        <span>LImit:</span>
+                                                        դր.1,000.00 - դր.50,000.00
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <label class="table-label_payment__danger">
+                                                        Acleda Bank
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        <a href="#">
+                                                            <label class="table-label_danger">Withdraw</label>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        EXCHANGE AM
+                                                    </div>
+                                                    322 lệnh | 99.38% hoàn tất
+                                                </td>
+                                                <td class="table-color_success">
+                                                    100.000 <sup>đ</sup>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        <span>Available:</span>
+                                                        372.74 USDT
+                                                    </div>
+                                                    <div class="table-content_title">
+                                                        <span>LImit:</span>
+                                                        դր.1,000.00 - դր.50,000.00
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <label class="table-label_payment__success">
+                                                        Acleda Bank
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        <a href="#">
+                                                            <label class="table-label_danger">Withdraw</label>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <div class="detail-article_blockquote">
-                                    Trong những ngày gần đây, chúng ta đã nhận được một lượng lớn thông tin về cái gọi
-                                    là "Metaverse" và nhiệm vụ của Mark Zuckerberg đối với vũ trụ kỹ thuật số này đã
-                                    khiến nó trở nên phổ biến hơn. Đó là sự phấn khích của anh ấy khi anh ấy đã công bố
-                                    kế hoạch đưa Facebook từ một mạng xã hội thành một công ty metaverse chỉ trong 5
-                                    năm. Nhưng anh ấy không phải là người duy nhất, vì Nvidia, Sony và Microsoft là
-                                    những công ty công nghệ lớn khác đang đặt cược vào vũ trụ mới này.
+                            </div>
+                            <div class="tab-pane fade" id="table-tab_ytc">
+                                <div class="wallet-table">
+                                    <div class="table-responsive">
+                                        <table class="table-theme">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: 30%">
+                                                    Advertisers
+                                                </th>
+                                                <th style="width: 10%">
+                                                    Price
+                                                </th>
+                                                <th style="width: 30%">
+                                                    Limit/Available
+                                                </th>
+                                                <th style="width: 14%; text-align: center;">
+                                                    Payment
+                                                </th>
+                                                <th style="width: 16%; text-align: center;">
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        Trade <label class="table-label_success">0 Fee</label>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        EXCHANGE AM
+                                                    </div>
+                                                    322 lệnh | 99.38% hoàn tất
+                                                </td>
+                                                <td class="table-color_danger">
+                                                    100.000 <sup>đ</sup>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        <span>Available:</span>
+                                                        372.74 USDT
+                                                    </div>
+                                                    <div class="table-content_title">
+                                                        <span>LImit:</span>
+                                                        դր.1,000.00 - դր.50,000.00
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <label class="table-label_payment__danger">
+                                                        Acleda Bank
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        <a href="#">
+                                                            <label class="table-label_danger">Withdraw</label>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        EXCHANGE AM
+                                                    </div>
+                                                    322 lệnh | 99.38% hoàn tất
+                                                </td>
+                                                <td class="table-color_success">
+                                                    100.000 <sup>đ</sup>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        <span>Available:</span>
+                                                        372.74 USDT
+                                                    </div>
+                                                    <div class="table-content_title">
+                                                        <span>LImit:</span>
+                                                        դր.1,000.00 - դր.50,000.00
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <label class="table-label_payment__success">
+                                                        Acleda Bank
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        <a href="#">
+                                                            <label class="table-label_danger">Withdraw</label>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <div class="detail-article_image">
-                                    <img src="./assets/images/article/1.png" class="w-100 h-auto img-fluid" alt="">
-                                </div>
-                                <div class="detail-article_content">
-                                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, nemo?</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fugit non
-                                        optio! Adipisci alias aliquam asperiores at consectetur consequatur, culpa
-                                        deleniti dicta facere illum inventore ipsam minima pariatur possimus repellat
-                                        soluta totam velit vero voluptatem voluptatum. Iusto minima repellendus ut.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fugit non
-                                        optio! Adipisci alias aliquam asperiores at consectetur consequatur, culpa
-                                        deleniti dicta facere illum inventore ipsam minima pariatur possimus repellat
-                                        soluta totam velit vero voluptatem voluptatum. Iusto minima repellendus ut.</p>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, sint.</p>
-                                    <img src="./assets/images/article/2.png" alt="">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, sint.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fugit non
-                                        optio! Adipisci alias aliquam asperiores at consectetur consequatur, culpa
-                                        deleniti dicta facere illum inventore ipsam minima pariatur possimus repellat
-                                        soluta totam velit vero voluptatem voluptatum. Iusto minima repellendus ut.</p>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fugit non
-                                        optio! Adipisci alias aliquam asperiores at consectetur consequatur, culpa
-                                        deleniti dicta facere illum inventore ipsam minima pariatur possimus repellat
-                                        soluta totam velit vero voluptatem voluptatum. Iusto minima repellendus ut.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fugit non
-                                        optio! Adipisci alias aliquam asperiores at consectetur consequatur, culpa
-                                        deleniti dicta facere illum inventore ipsam minima pariatur possimus repellat
-                                        soluta totam velit vero voluptatem voluptatum. Iusto minima repellendus ut.</p>
+                            </div>
+                            <div class="tab-pane fade" id="table-tab_bitcoin">
+                                <div class="wallet-table">
+                                    <div class="table-responsive">
+                                        <table class="table-theme">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: 30%">
+                                                    Advertisers
+                                                </th>
+                                                <th style="width: 10%">
+                                                    Price
+                                                </th>
+                                                <th style="width: 30%">
+                                                    Limit/Available
+                                                </th>
+                                                <th style="width: 14%; text-align: center;">
+                                                    Payment
+                                                </th>
+                                                <th style="width: 16%; text-align: center;">
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        Trade <label class="table-label_success">0 Fee</label>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        EXCHANGE AM
+                                                    </div>
+                                                    322 lệnh | 99.38% hoàn tất
+                                                </td>
+                                                <td class="table-color_danger">
+                                                    100.000 <sup>đ</sup>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        <span>Available:</span>
+                                                        372.74 USDT
+                                                    </div>
+                                                    <div class="table-content_title">
+                                                        <span>LImit:</span>
+                                                        դր.1,000.00 - դր.50,000.00
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <label class="table-label_payment__danger">
+                                                        Acleda Bank
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        <a href="#">
+                                                            <label class="table-label_danger">Withdraw</label>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        EXCHANGE AM
+                                                    </div>
+                                                    322 lệnh | 99.38% hoàn tất
+                                                </td>
+                                                <td class="table-color_success">
+                                                    100.000 <sup>đ</sup>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content_title">
+                                                        <span>Available:</span>
+                                                        372.74 USDT
+                                                    </div>
+                                                    <div class="table-content_title">
+                                                        <span>LImit:</span>
+                                                        դր.1,000.00 - դր.50,000.00
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <label class="table-label_payment__success">
+                                                        Acleda Bank
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-center ">
+                                                        <a href="#">
+                                                            <label class="table-label_danger">Withdraw</label>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 mt-md-0 mt-4">
-                    <div class="sidebar-article">
-                        <div class="sidebar-article_heading">
-                            Tin tức nổi bật
-                        </div>
-                        <div class="sidebar-article_list">
-                            <p class="article-list_item">
-                                <a href="">
-                                    <span class="article-item_meta">18:00 02-01-2022</span>
-                                    <span class="article-item_title">
-                                        Liệu SocialFi sẽ trở thành vấn đề lớn tiếp theo trong kỷ nguyên Web 3.0?
-                                    </span>
-                                </a>
-                            </p>
-
-                            <p class="article-list_item">
-                                <a href="">
-                                    <span class="article-item_meta">18:00 02-01-2022</span>
-                                    <span class="article-item_title">
-                                        Metaverse thúc đẩy thị trường bất động sản kỹ thuật số bùng nổ: JJ Lin đã mua gì
-                                        với giá 120.000 đô la?
-                                    </span>
-                                </a>
-                            </p>
-                            <p class="article-list_item">
-                                <a href="">
-                                    <span class="article-item_meta">18:00 02-01-2022</span>
-                                    <span class="article-item_title">
-                                        Liệu SocialFi sẽ trở thành vấn đề lớn tiếp theo trong kỷ nguyên Web 3.0?
-                                    </span>
-                                </a>
-                            </p>
-
-                            <p class="article-list_item">
-                                <a href="">
-                                    <span class="article-item_meta">18:00 02-01-2022</span>
-                                    <span class="article-item_title">
-                                        Metaverse thúc đẩy thị trường bất động sản kỹ thuật số bùng nổ: JJ Lin đã mua gì
-                                        với giá 120.000 đô la?
-                                    </span>
-                                </a>
-                            </p>
-
+                    <div class="wallet-inner">
+                        <div class="wallet-table">
+                            <div class="table-responsive">
+                                <table class="table-theme">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 30%">
+                                            Advertisers
+                                        </th>
+                                        <th style="width: 10%">
+                                            Price
+                                        </th>
+                                        <th style="width: 30%">
+                                            Limit/Available
+                                        </th>
+                                        <th style="width: 14%; text-align: center;">
+                                            Payment
+                                        </th>
+                                        <th style="width: 16%; text-align: center;">
+                                            <div class="d-flex align-items-center justify-content-center ">
+                                                Trade <label class="table-label_success">0 Fee</label>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="table-content_title">
+                                                EXCHANGE AM
+                                            </div>
+                                            322 lệnh | 99.38% hoàn tất
+                                        </td>
+                                        <td class="table-color_danger">
+                                            100.000 <sup>đ</sup>
+                                        </td>
+                                        <td>
+                                            <div class="table-content_title">
+                                                <span>Available:</span>
+                                                372.74 USDT
+                                            </div>
+                                            <div class="table-content_title">
+                                                <span>LImit:</span>
+                                                դր.1,000.00 - դր.50,000.00
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label class="table-label_payment__danger">
+                                                Acleda Bank
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center ">
+                                                <a href="#">
+                                                    <label class="table-label_danger">Withdraw</label>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-content_title">
+                                                EXCHANGE AM
+                                            </div>
+                                            322 lệnh | 99.38% hoàn tất
+                                        </td>
+                                        <td class="table-color_success">
+                                            100.000 <sup>đ</sup>
+                                        </td>
+                                        <td>
+                                            <div class="table-content_title">
+                                                <span>Available:</span>
+                                                372.74 USDT
+                                            </div>
+                                            <div class="table-content_title">
+                                                <span>LImit:</span>
+                                                դր.1,000.00 - դր.50,000.00
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label class="table-label_payment__success">
+                                                Acleda Bank
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center ">
+                                                <a href="#">
+                                                    <label class="table-label_danger">Withdraw</label>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,55 @@ let windowWidth = $(window).width();
 const handleTouchMove = function (ev) {
     ev.preventDefault();
 }
+
+const navigationMobile = function (e) {
+    if (windowWidth < 992) {
+        $("#header #navigation > ul > li > ul").each(function (index) {
+            $(this).prev().attr({
+                "href": "#subNavigation_" + index,
+                "data-toggle": "collapse"
+            });
+            $(this).attr({
+                "id": "subNavigation_" + index,
+                "class": "collapse list-unstyled mb-0",
+                "data-parent": "#navigation"
+            });
+        })
+
+        /*
+         * Call menu mobile
+         */
+        let body = $('body'),
+            hamburgerIconShow = $('#call-header_mobile'),
+            hamburgerIconHidden = $('#close-header_mobile');
+
+        hamburgerIconShow.click(function (e) {
+            if (!body.hasClass('is-show_navigation')) {
+                body.attr({
+                    'class': 'is-show_navigation',
+                    'style': 'overflow-y: hidden'
+                });
+                document.addEventListener('touchmove', handleTouchMove, {passive: false});
+            } else {
+                body.attr({
+                    'class': '',
+                    'style': ''
+                });
+                document.removeEventListener('touchmove', handleTouchMove);
+            }
+        });
+
+        hamburgerIconHidden.click(function (e) {
+            body.attr({
+                'class': '',
+                'style': ''
+            });
+            document.removeEventListener('touchmove', handleTouchMove);
+        });
+    }
+}
+
+
 const initWidthNavigationSub = function (e) {
     if (windowWidth > 1024) {
         let items = $('#navigation > ul > li > ul');
@@ -59,7 +108,7 @@ const eventLanguageFooter = function () {
             languageFotoer.removeClass('is-show');
         });
     } else {
-        languageFotoer.click(function () {
+        languageFotoer.click(function (e) {
             languageFotoer.addClass('is-show');
         });
         $(document).mouseup(function (e) {
@@ -135,15 +184,66 @@ const switchTheme = function () {
         }
     }
 
-
     buttonChangeTheme.click(function () {
         setLocalStorageTheme();
     });
+}
 
+const dropdownCoin = function () {
+    let actionElm = $('.dropdown-coin_btn');
+    actionElm.click(function (e) {
+        let elmParent = $(this).parent();
+        e.stopPropagation();
+        if (elmParent.hasClass('is-show')) {
+            elmParent.removeClass('is-show');
+        } else {
+            elmParent.addClass('is-show');
+        }
+    });
+
+    $(document).mouseup(function (e) {
+        let elm = $('.dropdown-coin.is-show');
+        elm.is(e.target) || 0 !== elm.has(e.target).length || (
+            elm.removeClass('is-show')
+        )
+    });
+}
+
+const chooseDropdownCoin = function () {
+    let elmChoose = $('.dropdown-coin .item-dropdown .item-dropdown_inner ul li a');
+    elmChoose.click(function (e) {
+        let img = $(this).data('image'),
+            name = $(this).data('name'),
+            removeActiveItems = $(this).closest('ul').children('li');
+        setActiveParent = $(this).parent(),
+            setDataElm = $(this).closest('.dropdown-coin.is-show'),
+            setDataImageElm = setDataElm.children('.dropdown-coin_btn').find('img'),
+            setDataTitleElm = setDataElm.children('.dropdown-coin_btn').find('span');
+
+        removeActiveItems.removeClass('active');
+        setActiveParent.addClass('active');
+        setDataImageElm.prop('src', img);
+        setDataTitleElm.text(name);
+        setDataElm.removeClass('is-show');
+    });
+}
+
+const copyClipBoard = function (value) {
+    let createTextarea = document.createElement('textarea');
+    createTextarea.style.cssText = 'position: absolute; left: -99999px';
+    createTextarea.setAttribute("id", "textareaCopy");
+    document.body.appendChild(createTextarea);
+    let textareaElm = document.getElementById('textareaCopy');
+    textareaElm.value = value;
+    textareaElm.select();
+    textareaElm.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    textareaElm.remove();
 }
 
 $(function () {
     switchTheme();
+    navigationMobile();
 
     initWidthNavigationSub();
     communityInitWidth();
@@ -151,4 +251,11 @@ $(function () {
     eventLanguageFooter();
     formAccount();
     viewPass();
+    dropdownCoin();
+    chooseDropdownCoin();
+
+    $('.copyClipBoard').click(function () {
+        copyClipBoard($(this).attr('data-clipboard'));
+    });
+
 });
