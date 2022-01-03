@@ -2314,6 +2314,7 @@ body {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .table-theme button [class*=table-label],

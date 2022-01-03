@@ -21,8 +21,7 @@ const navigationMobile = function (e) {
          * Call menu mobile
          */
         let body = $('body'),
-            hamburgerIconShow = $('#call-header_mobile'),
-            hamburgerIconHidden = $('#close-header_mobile');
+            hamburgerIconShow = $('#call-header_mobile');
 
         hamburgerIconShow.click(function (e) {
             if (!body.hasClass('is-show_navigation')) {
@@ -40,7 +39,7 @@ const navigationMobile = function (e) {
             }
         });
 
-        hamburgerIconHidden.click(function (e) {
+        $('#close-header_mobile, #header .header-overlay').click(function (e) {
             body.attr({
                 'class': '',
                 'style': ''
