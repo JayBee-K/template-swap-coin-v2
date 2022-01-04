@@ -2254,7 +2254,7 @@ body {
     max-width: 100%;
 }
 
-.page-wallet .wallet-table .wallet-table_heading{
+.page-wallet .wallet-table .wallet-table_heading {
     margin-bottom: 10px;
     font-size: 1.4em;
     font-weight: 700;
@@ -2617,6 +2617,139 @@ body {
     box-shadow: 0 2px 5px rgb(255 255 255 / 25%);
 }
 
+.page-merchant .merchant-action_tab .nav-tabs {
+    border-bottom: 0;
+}
+
+.page-merchant .merchant-action_tab .nav-tabs .nav-item {
+    margin-right: 10px;
+}
+
+.page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link {
+    border-radius: 20px;
+    font-size: 1.1em;
+    color: var(--theme-dark-color-light);
+    padding: .5rem 2rem;
+    margin-bottom: 0;
+    border: 0;
+    transition: var(--transition);
+}
+
+.page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active {
+    background-color: var(--theme-dark-light-2);
+    color: var(--theme-dark-color-white);
+    box-shadow: 0 0 3px rgb(255 255 255 / 25%) !important;
+}
+
+.page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link:hover {
+    color: var(--theme-dark-color-white);
+    background-color: var(--theme-dark-light);
+}
+
+.page-merchant .merchant-action_search .filter-inner {
+    position: relative;
+}
+
+.page-merchant .merchant-action_search .filter-inner .form-control {
+    background-color: var(--theme-dark-light-2);
+    border-color: transparent;
+    color: var(--theme-dark-color-white);
+    outline: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    padding-right: 50px;
+}
+
+.page-merchant .merchant-action_search .filter-inner .filter-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.page-merchant .merchant-action_search .filter-inner .filter-button button {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.2em;
+    color: var(--theme-dark-color-white);
+}
+
+.tool-item {
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background: var(--theme-dark-light-2);
+    color: var(--theme-dark-color-light);
+}
+
+.tool-item .tool-item_image {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 30px;
+    padding: 10px;
+    background: var(--theme-dark-color-white);
+    border-radius: 8px;
+}
+
+.tool-item .tool-item_image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.tool-item .tool-item_button {
+    width: 150px;
+    flex-shrink: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-item .tool-item_content .tool-item_title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--theme-dark-color-white);
+}
+
+.tool-item .tool-item_content .tool-item_desc {
+    font-size: 1.05em;
+}
+
+.tool-item .tool-item_button > a {
+    font-size: 1.1em;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--theme-dark-color-white);
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    padding-top: 2px;
+}
+
+.tool-item .tool-item_button > a:hover {
+    background: var(--primary-hover);
+}
+
+.tool-item + .tool-item {
+    margin-top: 15px;
+}
+
 
 html[data-theme=light] body {
     background-color: var(--theme-dark-color-light);
@@ -2645,7 +2778,8 @@ html[data-theme=light] .wallet-deposit,
 html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .form-control,
 html[data-theme=light] .page-merchant,
 html[data-theme=light] .page-merchant .merchant-item,
-html[data-theme=light] .page-merchant .support-item {
+html[data-theme=light] .page-merchant .support-item,
+html[data-theme=light] .tool-item {
     background-color: var(--theme-dark-color-white);
     color: var(--theme-dark);
 }
@@ -2705,7 +2839,11 @@ html[data-theme=light] .page-merchant .merchant-item .merchant-item_content .mer
 html[data-theme=light] .page-merchant .merchant-item .merchant-item_content .merchant-item_desc,
 html[data-theme=light] .page-merchant .support-item .support-item_content .support-item_title > a,
 html[data-theme=light] .page-merchant .support-item .support-item_content .support-item_code > a,
-html[data-theme=light] .page-wallet .wallet-table .wallet-table_heading{
+html[data-theme=light] .page-wallet .wallet-table .wallet-table_heading,
+html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .form-control,
+html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .filter-button button,
+html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link,
+html[data-theme=light] .tool-item .tool-item_content .tool-item_title {
     color: var(--theme-dark);
 }
 
@@ -2791,7 +2929,8 @@ html[data-theme=light] ::-webkit-scrollbar-thumb:hover {
 
 html[data-theme=light] .table-theme tbody tr:hover,
 html[data-theme=light] .table-theme [class*=table-label_payment],
-html[data-theme=light] .page-wallet .wallet-inner .wallet-filter form .filter-inner .filter-item .form-control {
+html[data-theme=light] .page-wallet .wallet-inner .wallet-filter form .filter-inner .filter-item .form-control,
+html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .form-control {
     background-color: #f9f9f9;
 }
 
@@ -2801,7 +2940,8 @@ html[data-theme=light] .page-wallet .wallet-deposit .deposit-qr .deposit-qr_imag
 }
 
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account,
-html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active {
+html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active,
+html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
 }
@@ -2814,7 +2954,8 @@ html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .fo
 }
 
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account > a,
-html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active {
+html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active,
+html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active {
     color: var(--theme-dark-color-white);
 }
 
@@ -2824,7 +2965,8 @@ html[data-theme=light] .table-theme thead tr th, html[data-theme=light] .table-t
 html[data-theme=light] .page-wallet .wallet-inner .wallet-filter form .filter-inner .filter-item .form-control,
 html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .form-control,
 html[data-theme=light] .page-account .account-inner .account-item .account-form .account-form_row .account-form_group,
-html[data-theme=light] .page-wallet .wallet-form .wallet-form_alert {
+html[data-theme=light] .page-wallet .wallet-form .wallet-form_alert,
+html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .form-control {
     border-color: #e9e9e9;
 }
 
@@ -3543,6 +3685,16 @@ html[data-theme=light] .page-merchant .merchant-item:hover {
     .page-merchant .merchant-inner .merchant-content .merchant-content_title {
         font-size: 2.6em;
     }
+
+    .page-merchant .merchant-action_tab .nav-tabs {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        margin-bottom: 15px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
 }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
@@ -3599,5 +3751,20 @@ html[data-theme=light] .page-merchant .merchant-item:hover {
 
     .page-wallet .wallet-deposit .deposit-qr .deposit-qr_address span:last-child {
         font-size: 1em;
+    }
+
+    .tool-item {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tool-item .tool-item_content {
+        margin-top: 10px;
+    }
+
+    .tool-item .tool-item_button {
+        margin: 30px auto;
     }
 }
