@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Swap coin V2</title>
+	<meta name="description" content="Swap coin V2">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Swap coin V2">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Swap coin V2">
+	<meta property="og:image" content="">
+
+	<link rel="icon" href="/assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+
+	<style>
+        :root {
+            --primary-color: #d9b432;
+            --primary-rgb: 217, 180, 50;
+            --primary-hover: #b99a2b;
+            --secondary-color: #295476;
+            --secondary-rgb: 41, 84, 118;
+            --secondary-hover: #0b202f;
+            --theme-dark: #0a0b0d;
+            --theme-dark-light: #121212;
+            --theme-dark-light-2: #333;
+            --theme-dark-color-light: #bcbcbc;
+            --theme-dark-color-white: #fff;
+            --theme-dark-color-light-2: #f3f2f2;
+            --transition: .3s all ease-in-out;
+        }
+	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+		  rel="stylesheet">
+
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
+	<link rel="stylesheet" href="./assets/plugins/sweetalert2/sweetalert2.min.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+<header class="header header-page" id="header">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-2 col-5 col-sm-4 col-md-3 order-1 order-lg-1">
+				<div class="header-logo">
+					<a href="index.html">
+						<img src="assets/images/logo.png" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-8 order-3 order-lg-2">
+				<div class="header-navigation" id="navigation">
+					<ul class="list-unstyled mb-0">
+						<li class="navigation-heading d-flex d-lg-none">
+							<div class="navigation-heading_logo">
+								<a href="/index.html">
+									<img src="./assets/images/logo.png" alt="">
+								</a>
+							</div>
+							<div class="navigation-heading_button">
+								<button type="button" class="btn-hamburger" id="close-header_mobile">
+									<span></span>
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</li>
+						<li>
+							<a href="">Home</a>
+						</li>
+						<li>
+							<a href="">
+								Supported Coins
+								<i class="fas fa-caret-down"></i>
+							</a>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="">Merchant Tools 1</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 2</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 3</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 4</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 5</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 6</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="">
+								Merchant Tools
+								<i class="fas fa-caret-down"></i>
+							</a>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="">Merchant Tools 1</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 2</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 3</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 4</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 5</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 6</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 7</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 8</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 9</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 10</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 11</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="">
+								Add Your Coin
+								<i class="fas fa-caret-down"></i>
+							</a>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="">Merchant Tools 1</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 2</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 3</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 4</a>
+								</li>
+								<li>
+									<a href="">Merchant Tools 5</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="">Support</a>
+						</li>
+						<li>
+							<a href="">Navigation item 1</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-2 col-7 col-sm-8 col-md-9 order-2 order-lg-3">
+				<div class="header-action">
+					<ul class="list-unstyled mb-0">
+						<li class="action-account">
+							<a class="d-none d-lg-block" href="javascript:void(0)">
+								Tài khoản
+							</a>
+							<a class="d-block d-lg-none" href="javascript:void(0)">
+								<i class="fas fa-user-alt"></i>
+							</a>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="">
+										Đăng nhập
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Đăng ký
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="action-theme">
+							<a href="javascript:void(0)" id="changeTheme">
+								<svg id="light" xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="40"
+									 data-icon="sun" viewBox="0 0 8 8">
+									<path d="M4 0c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm-2.5 1c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm5 0c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm-2.5 1c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm-3.5 1.5c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm7 0c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm-6 2.5c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm5 0c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm-2.5 1c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5z"
+									/>
+								</svg>
+								<svg id="dark" xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="40"
+									 data-icon="moon" viewBox="0 0 8 8">
+									<path d="M2.719 0c-1.58.53-2.719 2.021-2.719 3.781 0 2.21 1.79 4 4 4 1.76 0 3.251-1.17 3.781-2.75-.4.14-.831.25-1.281.25-2.21 0-4-1.79-4-4 0-.44.079-.881.219-1.281z"/>
+								</svg>
+							</a>
+						</li>
+						<li class="action-language">
+							<a href="javascript:void(0)">
+								<svg height="512" viewBox="0 0 510 510"
+									 width="512" xmlns="http://www.w3.org/2000/svg">
+									<path d="m364.224 332.333h-33.784c-8.437 0-15.3-6.862-15.3-15.297 0-8.447 6.834-15.296 15.296-15.296.073-.001.15 0 .227.001h32.35c5.965.057 11.859 2.729 16.177 7.336 5.68 6.06 15.198 6.37 21.257.69 6.061-5.677 6.37-15.193.69-21.252-9.714-10.363-23.414-16.845-38.767-16.845v-11.447c0-8.304-6.733-15.036-15.039-15.036s-15.039 6.732-15.039 15.036v11.447c-29.328 0-47.231 22.054-47.231 45.366 0 25.016 20.356 45.368 45.378 45.368h33.784c8.436 0 15.299 6.862 15.299 15.297 0 8.447-6.833 15.297-15.296 15.297-.074 0-.151-.001-.227-.001-37.204 0-39.937 1.254-47.892-4.267-6.827-4.734-16.195-3.04-20.93 3.781-4.735 6.823-3.041 16.191 3.782 20.925 11.538 8.003 21.569 9.631 33.332 9.631v11.446c0 8.304 6.733 15.036 15.039 15.036s15.039-6.732 15.039-15.036v-11.446c28.794 0 47.231-21.546 47.231-45.367.001-25.016-20.355-45.367-45.376-45.367z"/>
+									<path d="m420.237 202.014c-4.032-107.153-89.486-199.587-208.775-201.991-112.256-1.707-211.462 90.454-211.462 210.147 0 113.477 89.773 205.621 201.903 210 26.763 53.221 81.896 89.83 145.429 89.83 89.695 0 162.668-72.957 162.668-162.632 0-63.484-36.577-118.58-89.763-145.354zm-114.063-12.016c-.678-16.481-2.193-32.559-4.531-48.1h75.286c6.154 14.997 10.428 31.032 12.317 48.284-26.846-7.148-55.816-7.299-83.072-.184zm-118.695 187.687c-12.592-13.846-24.095-38.303-32.038-69.181h33.906c-5.683 23.157-6.033 47.085-1.868 69.181zm-144.004-99.252c-18.402-44.946-17.309-94.752-.001-136.534h75.29c-3.282 21.824-4.95 44.706-4.95 68.272 0 23.561 1.667 46.44 4.95 68.262zm100.417-68.263c0-23.698 1.79-46.6 5.314-68.272h121.978c3.067 18.856 4.838 38.633 5.241 59.069-32.577 15.813-60.252 42.936-76.464 77.465h-50.755c-3.524-21.67-5.314-44.57-5.314-68.262zm67.081-180.076c20.365.797 41.567 33.531 53.989 81.733h-109.517c7.412-28.762 27.093-82.023 55.528-81.733zm150.121 81.733h-65.161c-6.677-28.704-16.241-53.42-27.932-72.109 37.851 12.93 70.905 38.257 93.093 72.109zm-208.688-72.108c-11.691 18.689-21.255 43.405-27.931 72.108h-65.162c22.186-33.851 55.24-59.178 93.093-72.108zm-93.09 268.785h65.16c6.682 28.731 16.25 53.436 27.952 72.134-37.872-12.92-70.917-38.236-93.112-72.134zm288.016 171.425c-73.103 0-132.586-59.474-132.586-132.564 0-73.069 59.457-132.554 132.583-132.554 73.049 0 132.593 59.413 132.593 132.557 0 73.094-59.48 132.561-132.59 132.561z"/>
+								</svg>
+							</a>
+							<div class="action-language_inner">
+								<div class="language-item">
+									<div class="language-item_title">
+										Ngôn ngữ
+									</div>
+									<div class="language-item_list">
+										<a href="">简体中文</a>
+										<a href="">English</a>
+										<a href="" class="active">Tiếng Việt</a>
+										<a href="">繁体中文</a>
+										<a href="">Español</a>
+										<a href="">Русский язык</a>
+										<a href="">Français</a>
+										<a href="">Deutsch</a>
+										<a href="">Italiano</a>
+										<a href="">Português</a>
+										<a href="">ภาษาไทย</a>
+										<a href="">Indonesia</a>
+										<a href="">Türkçe</a>
+										<a href="">日本語</a>
+										<a href="">عربي</a>
+									</div>
+								</div>
+								<div class="language-item">
+									<div class="language-item_title">
+										Tiền tệ
+									</div>
+									<div class="language-item_list">
+										<a href="">VND</a>
+										<a href="">CNY</a>
+										<a href="" class="active">USD</a>
+										<a href="">KRW</a>
+										<a href="">EUR</a>
+										<a href="">GBP</a>
+										<a href="">HKD</a>
+										<a href="">JPY</a>
+										<a href="">RUB</a>
+										<a href="">TRY</a>
+										<a href="">INR</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="action-navigation d-block d-lg-none">
+							<button type="button" class="btn-hamburger" id="call-header_mobile">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-overlay"></div>
+</header>
+<div class="main">
+	<div class="section-page page-wallet">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="breadcrumb-theme">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="#">Trang chủ</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">Transfer page</li>
+						</ol>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="section-heading">
+						<h1 class="heading-title mb-0">
+							Transfer page
+						</h1>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="wallet-form">
+								<form action="">
+									<div class="form-item row align-items-center">
+										<label for="" class="col-md-4 mb-0">
+											Chọn quỹ:
+										</label>
+										<div class="form-item_inner col-md-8">
+											<select name="" class="form-control" id="">
+												<option value="">Tài khoản quỹ - 200,000 vnđ</option>
+												<option value="">Tài khoản quỹ - 200,000 vnđ</option>
+												<option value="">Tài khoản quỹ - 200,000 vnđ</option>
+												<option value="">Tài khoản quỹ - 200,000 vnđ</option>
+												<option value="">Tài khoản quỹ - 200,000 vnđ</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-item row align-items-center">
+										<label for="" class="col-md-4 mb-0">
+											Tài khoản nhận:
+										</label>
+										<div class="form-item_inner col-md-8">
+											<input placeholder="Nhập email, số điện thoại hoặc username" type="text"
+												   class="form-control">
+										</div>
+									</div>
+									<div class="form-item row align-items-center">
+										<label for="" class="col-md-4 mb-0">
+											Tên người người:
+										</label>
+										<div class="form-item_inner col-md-8">
+											<input readonly type="text"
+												   class="form-control">
+										</div>
+									</div>
+									<div class="form-item row align-items-center">
+										<label for="" class="col-md-4 mb-0">
+											Số tiền cẩn chuyển:
+										</label>
+										<div class="form-item_inner col-md-8">
+											<input placeholder="0.0" type="text"
+												   class="form-control">
+										</div>
+									</div>
+									<div class="form-item row">
+										<label for="" class="col-md-4 mb-0">
+											Nội dung:
+										</label>
+										<div class="form-item_inner col-md-8">
+											<textarea name="" class="form-control" rows="4"></textarea>
+										</div>
+									</div>
+									<div class="row mt-4 justify-content-center">
+										<div class="col-md-6 col-lg-3">
+											<button class="form-item_button">Continue</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-4 mt-md-0 mt-4">
+							<div class="wallet-table">
+								<div class="wallet-table_heading">
+									Phí chuyển tiền
+								</div>
+								<div class="table-responsive">
+									<table class="table-theme">
+										<thead>
+										<tr>
+											<th style="width: 60%">
+												Loại
+											</th>
+											<th style="width: 40%">
+												VNĐ
+											</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>
+												Phí cố định
+											</td>
+											<td>
+												<div class="table-content_title font-weight-bold">
+													100 VNĐ
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Phí %
+											</td>
+											<td>
+												<div class="table-content_title font-weight-bold">
+													0 %
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Tổng chuyển đổi tối đa trong ngày
+											</td>
+											<td>
+												<div class="table-content_title font-weight-bold">
+													50,000,000 VNĐ
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Số tiền chuyển tối thiểu
+											</td>
+											<td>
+												<div class="table-content_title font-weight-bold">
+													10,000 VNĐ
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Số tiền chuyển tối đa
+											</td>
+											<td>
+												<div class="table-content_title font-weight-bold">
+													20,000,000 VNĐ
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 mt-md-5 mt-4">
+					<div class="wallet-table">
+						<div class="wallet-table_heading">
+							Lịch sử chuyển tiền
+						</div>
+						<div class="table-responsive">
+							<table class="table-theme">
+								<thead>
+								<tr>
+									<th style="width: 20%">
+										Đơn hàng
+									</th>
+									<th style="width: 14%">
+										Số tiền
+									</th>
+									<th style="width: 20%">
+										Tài khoản nhận
+									</th>
+									<th style="width: 13%;">
+										Ngày tạo
+									</th>
+									<th style="width: 13%; text-align: center;">
+										Trạng thái
+									</th>
+									<th style="width: 20%; text-align: center;">
+										Nội dung
+									</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>
+										<div class="table-content_title">
+											D603CEED5892C5
+										</div>
+									</td>
+									<td class="table-color_danger">
+										100.000 <sup>đ</sup>
+									</td>
+									<td>
+										<div class="table-content_title">
+											Nguyễn Văn Bình
+										</div>
+									</td>
+									<td>
+										2021-03-15 20:40:37
+									</td>
+									<td style="text-align: center">
+										<label class="table-label_payment__danger">
+											Đã hủy
+										</label>
+									</td>
+									<td>
+										Dịch vụ cực kì tốt
+										<br>
+										Chăm sóc khách hàng ok
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="table-content_title">
+											D603CEED5892C5
+										</div>
+									</td>
+									<td class="table-color_danger">
+										100.000 <sup>đ</sup>
+									</td>
+									<td>
+										<div class="table-content_title">
+											Nguyễn Văn Bình
+										</div>
+									</td>
+									<td>
+										2021-03-15 20:40:37
+									</td>
+									<td style="text-align: center">
+										<label class="table-label_payment__danger">
+											Đã hủy
+										</label>
+									</td>
+									<td>
+										Dịch vụ cực kì tốt
+										<br>
+										Chăm sóc khách hàng ok
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="table-content_title">
+											D603CEED5892C5
+										</div>
+									</td>
+									<td class="table-color_danger">
+										100.000 <sup>đ</sup>
+									</td>
+									<td>
+										<div class="table-content_title">
+											Nguyễn Văn Bình
+										</div>
+									</td>
+									<td>
+										2021-03-15 20:40:37
+									</td>
+									<td style="text-align: center">
+										<label class="table-label_payment__success">
+											Đã nhận
+										</label>
+									</td>
+									<td>
+										Dịch vụ cực kì tốt
+										<br>
+										Chăm sóc khách hàng ok
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="table-content_title">
+											D603CEED5892C5
+										</div>
+									</td>
+									<td class="table-color_danger">
+										100.000 <sup>đ</sup>
+									</td>
+									<td>
+										<div class="table-content_title">
+											Nguyễn Văn Bình
+										</div>
+									</td>
+									<td>
+										2021-03-15 20:40:37
+									</td>
+									<td style="text-align: center">
+										<label class="table-label_payment__danger">
+											Đã hủy
+										</label>
+									</td>
+									<td>
+										Dịch vụ cực kì tốt
+										<br>
+										Chăm sóc khách hàng ok
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="table-content_title">
+											D603CEED5892C5
+										</div>
+									</td>
+									<td class="table-color_danger">
+										100.000 <sup>đ</sup>
+									</td>
+									<td>
+										<div class="table-content_title">
+											Nguyễn Văn Bình
+										</div>
+									</td>
+									<td>
+										2021-03-15 20:40:37
+									</td>
+									<td style="text-align: center">
+										<label class="table-label_payment__danger">
+											Đã hủy
+										</label>
+									</td>
+									<td>
+										Dịch vụ cực kì tốt
+										<br>
+										Chăm sóc khách hàng ok
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="footer-top">
+					<div class="section-heading heading-center">
+						<div class="heading-title">
+							Bắt đầu giao dịch
+						</div>
+						<div class="heading-desc">
+							Đăng ký và giao dịch để nhận phần thưởng USDTEST trị giá <b>$100</b> và
+							<b>$5500</b>
+						</div>
+						<a class="heading-btn">
+							Đăng ký ngay
+						</a>
+					</div>
+				</div>
+				<div class="footer-middle">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="footer-item">
+								<div class="footer-item_logo">
+									<a href="/">
+										<img src="./assets/images/logo.png" alt="">
+									</a>
+								</div>
+								<div class="footer-item_contact">
+									<p>
+										Hotline dịch vụ:
+										<a href="tel:0909.090.909">0909.090.909</a>
+									</p>
+									<p>
+										Hỗ trợ kỹ thuật:
+										<a href="tel:0909.090.909">0909.090.909</a>
+									</p>
+									<p>
+										Email hỗ trợ:
+										<a href="mailto:example@gmail.com">example@gmail.com</a>
+									</p>
+								</div>
+								<div class="footer-item_language">
+									<div class="language-choose">
+										Tiếng việt
+										<i class="fas fa-caret-down"></i>
+									</div>
+									<div class="language-list">
+										<ul class="list-unstyled mb-0">
+											<li>简体中文</li>
+											<li>English</li>
+											<li class="active">Tiếng Việt</li>
+											<li>繁体中文</li>
+											<li>Español</li>
+											<li>Русский язык</li>
+											<li>Français</li>
+											<li>Deutsch</li>
+											<li>Italiano</li>
+											<li>Português</li>
+											<li>ภาษาไทย</li>
+											<li>Indonesia</li>
+											<li>Türkçe</li>
+											<li>日本語</li>
+											<li>عربي</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-9">
+							<div class="row">
+								<div class="col-lg-3 col-6">
+									<div class="footer-item">
+										<div class="footer-title">
+											Về chúng tôi
+										</div>
+										<div class="footer-list">
+											<ul class="list-unstyled mb-0">
+												<li>
+													<a href="">Tuyển dụng</a>
+												</li>
+												<li>
+													<a href="">Thoả thuận người dùng</a>
+												</li>
+												<li>
+													<a href="">Tiêu chuẩn thu phí</a>
+												</li>
+												<li>
+													<a href="">Partners</a>
+												</li>
+												<li>
+													<a href="">Bảo mật thông tin</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="footer-item">
+										<div class="footer-title">
+											Về chúng tôi
+										</div>
+										<div class="footer-list">
+											<ul class="list-unstyled mb-0">
+												<li>
+													<a href="">Tuyển dụng</a>
+												</li>
+												<li>
+													<a href="">Thoả thuận người dùng</a>
+												</li>
+												<li>
+													<a href="">Tiêu chuẩn thu phí</a>
+												</li>
+												<li>
+													<a href="">Partners</a>
+												</li>
+												<li>
+													<a href="">Bảo mật thông tin</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="footer-item">
+										<div class="footer-title">
+											Về chúng tôi
+										</div>
+										<div class="footer-list">
+											<ul class="list-unstyled mb-0">
+												<li>
+													<a href="">Tuyển dụng</a>
+												</li>
+												<li>
+													<a href="">Thoả thuận người dùng</a>
+												</li>
+												<li>
+													<a href="">Tiêu chuẩn thu phí</a>
+												</li>
+												<li>
+													<a href="">Partners</a>
+												</li>
+												<li>
+													<a href="">Bảo mật thông tin</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="footer-item">
+										<div class="footer-title">
+											Ứng dụng
+										</div>
+										<div class="footer-app">
+											<ul class="list-unstyled mb-0">
+												<li>
+													<a href="">
+														<svg width="160" height="44" viewBox="0 0 160 44" fill="none"
+															 xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.5" y="0.5" width="159" height="43" rx="21.5"
+																  stroke="white"/>
+															<path d="M57.8535 10.862V16.782H59.5989C60.5095 16.782 61.2431 16.5039 61.7911 15.9567C62.3476 15.4006 62.6259 14.6831 62.6259 13.813C62.6259 12.934 62.3476 12.2254 61.7996 11.6782C61.2515 11.1311 60.518 10.862 59.5989 10.862H57.8535ZM59.5905 11.7231C60.2397 11.7231 60.754 11.9114 61.1335 12.2971C61.5129 12.6738 61.7068 13.1761 61.7068 13.813C61.7068 14.4319 61.5129 14.9432 61.1335 15.3378C60.754 15.7325 60.2397 15.9298 59.5905 15.9298H58.7473V11.7231H59.5905Z"
+																  fill="white"/>
+															<path d="M65.5549 12.2792C64.9394 12.2792 64.4251 12.5034 64.0035 12.9429C63.5819 13.3824 63.3711 13.9296 63.3711 14.5754C63.3711 15.2212 63.5819 15.7684 64.0035 16.2079C64.4251 16.6474 64.9394 16.8717 65.5549 16.8806C66.162 16.8806 66.6764 16.6564 67.1064 16.2169C67.5364 15.7684 67.7556 15.2212 67.7556 14.5754C67.7556 13.9296 67.5364 13.3824 67.1064 12.9429C66.6764 12.5034 66.162 12.2792 65.5549 12.2792ZM65.5634 13.1403C65.9259 13.1492 66.2295 13.2838 66.474 13.5618C66.7185 13.8309 66.845 14.1718 66.845 14.5844C66.845 14.988 66.7185 15.3289 66.474 15.6069C66.2295 15.876 65.9175 16.0106 65.5549 16.0106C65.1839 16.0106 64.8804 15.876 64.6359 15.6069C64.3914 15.3289 64.2733 14.988 64.2733 14.5844C64.2733 14.1718 64.3914 13.8309 64.6359 13.5618C64.8804 13.2838 65.1924 13.1492 65.5634 13.1403Z"
+																  fill="white"/>
+															<path d="M72.9904 15.2212L71.7172 12.2792H71.4137L70.1574 15.2571L69.0697 12.3778H68.1253L69.9634 16.8806H70.267L71.5655 13.9475L72.864 16.8806H73.1675L75.0056 12.3778H74.0613L72.9904 15.2212Z"
+																  fill="white"/>
+															<path d="M77.8683 12.2792C77.354 12.2792 76.9408 12.4586 76.6289 12.8174V12.3778H75.8026V16.782H76.6879V14.1538C76.6879 13.5529 77.0842 13.1313 77.6322 13.1313C78.1719 13.1313 78.5344 13.5439 78.5344 14.1538V16.782H79.4198V14.0283C79.4198 12.9788 78.838 12.2792 77.8683 12.2792Z"
+																  fill="white"/>
+															<path d="M80.6525 10.0547V16.782H81.5378V10.0547H80.6525Z"
+																  fill="white"/>
+															<path d="M84.7405 12.2792C84.125 12.2792 83.6106 12.5034 83.189 12.9429C82.7674 13.3824 82.5567 13.9296 82.5567 14.5754C82.5567 15.2212 82.7674 15.7684 83.189 16.2079C83.6106 16.6474 84.125 16.8717 84.7405 16.8806C85.3476 16.8806 85.8619 16.6564 86.2919 16.2169C86.7219 15.7684 86.9412 15.2212 86.9412 14.5754C86.9412 13.9296 86.7219 13.3824 86.2919 12.9429C85.8619 12.5034 85.3476 12.2792 84.7405 12.2792ZM84.7489 13.1403C85.1115 13.1492 85.415 13.2838 85.6595 13.5618C85.9041 13.8309 86.0305 14.1718 86.0305 14.5844C86.0305 14.988 85.9041 15.3289 85.6595 15.6069C85.415 15.876 85.103 16.0106 84.7405 16.0106C84.3695 16.0106 84.0659 15.876 83.8214 15.6069C83.5769 15.3289 83.4589 14.988 83.4589 14.5844C83.4589 14.1718 83.5769 13.8309 83.8214 13.5618C84.0659 13.2838 84.3779 13.1492 84.7489 13.1403Z"
+																  fill="white"/>
+															<path d="M89.5497 12.2792C88.7993 12.2792 88.2175 12.5931 87.8044 13.221L88.3187 13.7771C88.6644 13.3376 89.0523 13.1223 89.4654 13.1223C90.0304 13.1223 90.3508 13.4542 90.3508 14.0641V14.3512H89.1787C88.2428 14.3512 87.6526 14.8445 87.6526 15.6069C87.6526 16.3694 88.226 16.8806 89.0944 16.8806C89.6678 16.8806 90.1062 16.6833 90.4182 16.2886V16.782H91.2445V14.118C91.2445 12.934 90.57 12.2792 89.5497 12.2792ZM89.2799 16.1541C88.8499 16.1541 88.5548 15.9388 88.5548 15.5711C88.5548 15.2123 88.7993 15.0329 89.2884 15.0329H90.3508V15.1136C90.3508 15.7146 89.8786 16.1541 89.2799 16.1541Z"
+																  fill="white"/>
+															<path d="M95.6217 12.916C95.2929 12.4944 94.8376 12.2792 94.2389 12.2792C93.6571 12.2792 93.1681 12.5034 92.7887 12.9429C92.4092 13.3824 92.2153 13.9296 92.2153 14.5844C92.2153 15.2392 92.4092 15.7863 92.7887 16.2258C93.1681 16.6654 93.6571 16.8806 94.2389 16.8806C94.8882 16.8806 95.3688 16.6384 95.6892 16.1541V16.782H96.5155V10.0547H95.6217V12.916ZM94.3907 16.0195C94.0281 16.0195 93.7246 15.885 93.4801 15.6159C93.2355 15.3468 93.1175 14.997 93.1175 14.5754C93.1175 14.1538 93.2355 13.813 93.4801 13.5439C93.7246 13.2748 94.0281 13.1403 94.3907 13.1403C94.728 13.1403 95.0231 13.2658 95.2676 13.517C95.5121 13.7592 95.6386 14.118 95.6386 14.5844C95.6386 15.5262 95.0737 16.0195 94.3907 16.0195Z"
+																  fill="white"/>
+															<path d="M102.082 12.2792C101.466 12.2792 100.952 12.5034 100.53 12.9429C100.109 13.3824 99.8977 13.9296 99.8977 14.5754C99.8977 15.2212 100.109 15.7684 100.53 16.2079C100.952 16.6474 101.466 16.8717 102.082 16.8806C102.689 16.8806 103.203 16.6564 103.633 16.2169C104.063 15.7684 104.282 15.2212 104.282 14.5754C104.282 13.9296 104.063 13.3824 103.633 12.9429C103.203 12.5034 102.689 12.2792 102.082 12.2792ZM102.09 13.1403C102.453 13.1492 102.756 13.2838 103.001 13.5618C103.245 13.8309 103.372 14.1718 103.372 14.5844C103.372 14.988 103.245 15.3289 103.001 15.6069C102.756 15.876 102.444 16.0106 102.082 16.0106C101.711 16.0106 101.407 15.876 101.163 15.6069C100.918 15.3289 100.8 14.988 100.8 14.5844C100.8 14.1718 100.918 13.8309 101.163 13.5618C101.407 13.2838 101.719 13.1492 102.09 13.1403Z"
+																  fill="white"/>
+															<path d="M107.363 12.2792C106.849 12.2792 106.436 12.4586 106.124 12.8174V12.3778H105.297V16.782H106.183V14.1538C106.183 13.5529 106.579 13.1313 107.127 13.1313C107.667 13.1313 108.029 13.5439 108.029 14.1538V16.782H108.914V14.0283C108.914 12.9788 108.333 12.2792 107.363 12.2792Z"
+																  fill="white"/>
+															<path d="M114.424 16.0285C113.885 16.0285 113.606 15.8312 113.606 15.2661V13.1941H114.838V12.3778H113.606V11.2207H112.713V12.3778H112.038V13.1941H112.713V15.3468C112.713 16.3783 113.286 16.8806 114.239 16.8806C114.45 16.8806 114.694 16.8447 114.972 16.782V15.9837C114.728 16.0106 114.551 16.0285 114.424 16.0285Z"
+																  fill="white"/>
+															<path d="M117.953 12.2792C117.455 12.2792 117.05 12.4586 116.755 12.8084V10.0547H115.87V16.782H116.755V14.1628C116.755 13.5618 117.151 13.1403 117.7 13.1403C118.248 13.1403 118.602 13.5529 118.602 14.1628V16.782H119.487V14.0283C119.487 12.9878 118.897 12.2792 117.953 12.2792Z"
+																  fill="white"/>
+															<path d="M124.514 14.2974C124.514 13.7143 124.329 13.2389 123.966 12.8532C123.603 12.4675 123.148 12.2792 122.6 12.2792C122.001 12.2792 121.487 12.5034 121.074 12.9519C120.661 13.3914 120.458 13.9386 120.458 14.5844C120.458 15.2392 120.669 15.7863 121.091 16.2258C121.512 16.6654 122.044 16.8806 122.684 16.8806C123.317 16.8806 123.865 16.6474 124.337 16.172L123.915 15.5262C123.544 15.876 123.14 16.0464 122.71 16.0464C121.993 16.0464 121.47 15.6159 121.361 14.8894H124.447C124.489 14.6831 124.514 14.4857 124.514 14.2974ZM122.566 13.0775C123.165 13.0775 123.62 13.4991 123.629 14.1538H121.377C121.512 13.4991 121.985 13.0775 122.566 13.0775Z"
+																  fill="white"/>
+															<path d="M67.1792 32.5623L62.5787 21.2773H62.0095L57.4089 32.5623H59.1954L59.9385 30.7123H64.6339L65.3769 32.5623H67.1792ZM60.555 29.1819L62.2941 24.5737L64.0173 29.1819H60.555Z"
+																  fill="white"/>
+															<path d="M72.6669 24.1196C71.5286 24.1196 70.5326 24.6242 69.9634 25.4819V24.3046H68.4141V35.5896H70.0741V31.5701C70.6907 32.3605 71.5602 32.7473 72.6669 32.7473C73.7735 32.7473 74.6905 32.3437 75.4019 31.5196C76.1134 30.6955 76.477 29.6696 76.477 28.4251C76.477 27.1973 76.1134 26.1714 75.4019 25.3473C74.6905 24.5233 73.7735 24.1196 72.6669 24.1196ZM72.3981 31.1328C71.7499 31.1328 71.1966 30.8973 70.7381 30.4433C70.2796 29.9723 70.0583 29.2996 70.0583 28.4251C70.0583 26.6592 71.1175 25.7342 72.3981 25.7342C73.0779 25.7342 73.6313 25.9864 74.0897 26.491C74.5482 26.9955 74.7695 27.6514 74.7695 28.4419C74.7695 29.2323 74.5482 29.8714 74.0897 30.376C73.6313 30.8805 73.0779 31.1328 72.3981 31.1328Z"
+																  fill="white"/>
+															<path d="M82.3243 24.1196C81.186 24.1196 80.19 24.6242 79.6209 25.4819V24.3046H78.0715V35.5896H79.7315V31.5701C80.3481 32.3605 81.2176 32.7473 82.3243 32.7473C83.431 32.7473 84.3479 32.3437 85.0593 31.5196C85.7708 30.6955 86.1344 29.6696 86.1344 28.4251C86.1344 27.1973 85.7708 26.1714 85.0593 25.3473C84.3479 24.5233 83.431 24.1196 82.3243 24.1196ZM82.0555 31.1328C81.4073 31.1328 80.854 30.8973 80.3955 30.4433C79.937 29.9723 79.7157 29.2996 79.7157 28.4251C79.7157 26.6592 80.775 25.7342 82.0555 25.7342C82.7353 25.7342 83.2887 25.9864 83.7471 26.491C84.2056 26.9955 84.427 27.6514 84.427 28.4419C84.427 29.2323 84.2056 29.8714 83.7471 30.376C83.2887 30.8805 82.7353 31.1328 82.0555 31.1328Z"
+																  fill="white"/>
+															<path d="M95.1005 21.2773C94.1677 21.2773 93.3931 21.5633 92.7607 22.1183C92.1283 22.6733 91.8121 23.3964 91.8121 24.2878C91.8121 25.7173 92.7133 26.6255 94.2468 27.3655L95.4009 27.9373C96.4917 28.4755 96.9344 28.8119 96.9344 29.6023C96.9344 30.5442 96.2072 31.1496 95.1321 31.1496C94.0729 31.1496 93.1717 30.561 92.3971 29.3837L91.2113 30.3423C92.0176 31.8392 93.4405 32.7473 95.1479 32.7473C96.1597 32.7473 96.9976 32.4614 97.6458 31.8728C98.3098 31.2842 98.6418 30.4937 98.6418 29.5351C98.6418 28.0719 97.8355 27.1973 96.1439 26.3733L94.974 25.8014C93.9148 25.2633 93.5195 24.9773 93.5195 24.2205C93.5195 23.346 94.2152 22.8751 95.1005 22.8751C96.0016 22.8751 96.7447 23.3292 97.298 24.2205L98.4679 23.2619C97.8197 22.0678 96.5708 21.2773 95.1005 21.2773Z"
+																  fill="white"/>
+															<path d="M103.87 31.1496C102.858 31.1496 102.337 30.7796 102.337 29.7201V25.8351H104.645V24.3046H102.337V22.1351H100.661V24.3046H99.3961V25.8351H100.661V29.8714C100.661 31.8055 101.736 32.7473 103.522 32.7473C103.918 32.7473 104.376 32.6801 104.898 32.5623V31.0655C104.439 31.116 104.107 31.1496 103.87 31.1496Z"
+																  fill="white"/>
+															<path d="M109.715 24.1196C108.56 24.1196 107.596 24.5401 106.806 25.3642C106.015 26.1883 105.62 27.2142 105.62 28.4251C105.62 29.636 106.015 30.6619 106.806 31.486C107.596 32.3101 108.56 32.7305 109.715 32.7473C110.853 32.7473 111.817 32.3269 112.624 31.5028C113.43 30.6619 113.841 29.636 113.841 28.4251C113.841 27.2142 113.43 26.1883 112.624 25.3642C111.817 24.5401 110.853 24.1196 109.715 24.1196ZM109.73 25.7342C110.41 25.751 110.979 26.0033 111.438 26.5246C111.896 27.0292 112.133 27.6683 112.133 28.4419C112.133 29.1987 111.896 29.8378 111.438 30.3592C110.979 30.8637 110.394 31.116 109.715 31.116C109.019 31.116 108.45 30.8637 107.991 30.3592C107.533 29.8378 107.312 29.1987 107.312 28.4419C107.312 27.6683 107.533 27.0292 107.991 26.5246C108.45 26.0033 109.035 25.751 109.73 25.7342Z"
+																  fill="white"/>
+															<path d="M119.238 24.2205C118.273 24.2205 117.53 24.6073 116.977 25.381V24.3046H115.428V32.5623H117.088V28.156C117.088 26.6928 118.052 25.8687 119.364 25.8687H119.87V24.3046C119.681 24.2542 119.475 24.2205 119.238 24.2205Z"
+																  fill="white"/>
+															<path d="M128 27.9037C128 26.8105 127.652 25.9192 126.972 25.196C126.293 24.4728 125.439 24.1196 124.411 24.1196C123.289 24.1196 122.324 24.5401 121.55 25.381C120.775 26.2051 120.396 27.231 120.396 28.4419C120.396 29.6696 120.791 30.6955 121.581 31.5196C122.372 32.3437 123.368 32.7473 124.569 32.7473C125.755 32.7473 126.783 32.3101 127.668 31.4187L126.878 30.2078C126.182 30.8637 125.423 31.1833 124.617 31.1833C123.273 31.1833 122.293 30.376 122.087 29.0137H127.874C127.953 28.6269 128 28.2569 128 27.9037ZM124.348 25.6164C125.471 25.6164 126.324 26.4069 126.34 27.6346H122.119C122.372 26.4069 123.257 25.6164 124.348 25.6164Z"
+																  fill="white"/>
+															<path d="M49.6908 22.2639C49.6633 19.122 52.3828 17.5905 52.5094 17.5221C50.968 15.3749 48.5788 15.0801 47.7365 15.0591C45.7271 14.8591 43.7838 16.2064 42.7598 16.2064C41.7193 16.2064 40.1448 15.0801 38.4438 15.1117C36.2582 15.1433 34.2158 16.3537 33.0982 18.2273C30.7861 22.0533 32.5092 27.674 34.7278 30.7685C35.8343 32.2842 37.128 33.9736 38.8236 33.9157C40.4807 33.8525 41.1027 32.9052 43.1011 32.9052C45.083 32.9052 45.6665 33.9157 47.3951 33.8788C49.1733 33.8525 50.2964 32.3579 51.3644 30.8317C52.6471 29.095 53.1591 27.3845 53.1811 27.3003C53.137 27.274 49.7238 26.0267 49.6908 22.2639ZM46.4262 13.0224C47.3181 11.9541 47.9291 10.5068 47.7585 9.0332C46.4703 9.08583 44.8518 9.88577 43.9269 10.9278C43.1066 11.8488 42.3689 13.354 42.5616 14.7696C44.004 14.8749 45.4959 14.0697 46.4262 13.0224Z"
+																  fill="white"/>
+														</svg>
+													</a>
+												</li>
+												<li>
+													<a href="">
+														<svg width="160" height="44" viewBox="0 0 160 44" fill="none"
+															 xmlns="http://www.w3.org/2000/svg">
+															<rect x="0.5" y="0.5" width="159" height="43" rx="21.5"
+																  stroke="white"/>
+															<path d="M38.9089 21.4522L27.1952 9.88281C27.0976 10.172 27 10.4613 27 10.8469V32.1538C27 32.5395 27.0976 32.8287 27.1952 33.1179L38.9089 21.4522Z"
+																  fill="white"/>
+															<path d="M40.2755 21.4512L44.1801 25.3076L48.4751 22.8973C49.8417 22.126 49.8417 20.8727 48.4751 20.1014L44.0825 17.5947L40.2755 21.4512Z"
+																  fill="white"/>
+															<path d="M39.5924 20.777L43.2041 17.1134L29.4405 9.40056C28.8548 9.11133 28.2691 9.01492 27.8787 9.20774L39.5924 20.777Z"
+																  fill="white"/>
+															<path d="M39.5924 22.1289L27.8787 33.7947C28.2691 33.9875 28.8548 33.8911 29.5381 33.6019L43.3993 25.889L39.5924 22.1289Z"
+																  fill="white"/>
+															<path d="M63.0244 10.6943C62.2228 10.6943 61.5439 10.9903 60.9959 11.5823C60.4479 12.1654 60.178 12.8919 60.178 13.753C60.178 14.6231 60.4479 15.3496 60.9959 15.9326C61.5439 16.5157 62.2228 16.8117 63.0244 16.8117C64.1123 16.8117 65.0611 16.1928 65.5437 15.2509V13.5826H63.0163V14.4257H64.6767V15.0626C64.3086 15.6635 63.7769 15.9595 63.0653 15.9595C62.4846 15.9595 62.002 15.7532 61.6339 15.3317C61.2658 14.9101 61.0777 14.3809 61.0777 13.744C61.0777 13.1162 61.2577 12.5959 61.6176 12.1833C61.9775 11.7707 62.4437 11.5644 63.0163 11.5644C63.687 11.5644 64.2268 11.8783 64.6276 12.4972L65.2574 11.9322C64.7258 11.1069 63.9814 10.6943 63.0244 10.6943Z"
+																  fill="white"/>
+															<path d="M66.6078 10.793V16.713H70.2558V15.8609H67.4748V13.9862H69.4952V13.161H67.4748V11.6451H70.1577V10.793H66.6078Z"
+																  fill="white"/>
+															<path d="M70.7166 10.793V11.6451H72.5325V16.713H73.3995V11.6451H75.2235V10.793H70.7166Z"
+																  fill="white"/>
+															<path d="M77.9185 10.793V16.713H78.7855V10.793H77.9185Z"
+																  fill="white"/>
+															<path d="M79.599 10.793V11.6451H81.4149V16.713H82.2819V11.6451H84.1059V10.793H79.599Z"
+																  fill="white"/>
+															<path d="M89.3038 10.6943C88.5104 10.6943 87.8396 10.9903 87.2916 11.5823C86.7436 12.1654 86.4737 12.8919 86.4737 13.753C86.4737 14.6141 86.7436 15.3406 87.2916 15.9326C87.8396 16.5157 88.5104 16.8117 89.3038 16.8117C90.089 16.8117 90.7597 16.5157 91.3077 15.9326C91.8639 15.3406 92.142 14.6141 92.142 13.753C92.142 12.8919 91.8639 12.1654 91.3077 11.5823C90.7597 10.9903 90.089 10.6943 89.3038 10.6943ZM89.3119 11.5644C89.86 11.5644 90.3262 11.7707 90.6943 12.1923C91.0623 12.6049 91.2505 13.1251 91.2505 13.744C91.2505 14.3809 91.0623 14.9011 90.6943 15.3227C90.3262 15.7353 89.8681 15.9416 89.3119 15.9416C88.7476 15.9416 88.2895 15.7353 87.9214 15.3227C87.5534 14.9011 87.3734 14.3809 87.3734 13.744C87.3734 13.1162 87.5534 12.5959 87.9214 12.1833C88.2895 11.7707 88.7476 11.5644 89.3119 11.5644Z"
+																  fill="white"/>
+															<path d="M96.7657 14.7845L93.4857 10.6943H93.1831V16.713H94.0501V12.7125L97.3382 16.8117H97.6327V10.793H96.7657V14.7845Z"
+																  fill="white"/>
+															<path d="M65.4227 21.1053C64.0199 21.1053 62.8319 21.6233 61.8728 22.6593C60.9138 23.6796 60.4414 24.9511 60.4414 26.458C60.4414 27.9806 60.9138 29.252 61.8728 30.2723C62.8319 31.2926 64.0199 31.8106 65.4227 31.8106C67.3265 31.8106 68.9869 30.7275 69.8314 29.0794V26.1597H65.4084V27.6352H68.3141V28.7497C67.67 29.8014 66.7396 30.3194 65.4943 30.3194C64.478 30.3194 63.6334 29.9584 62.9893 29.2206C62.3452 28.4829 62.016 27.5568 62.016 26.4423C62.016 25.3435 62.3309 24.4331 62.9607 23.711C63.5905 22.9889 64.4064 22.6279 65.4084 22.6279C66.5821 22.6279 67.5269 23.1773 68.2283 24.2604L69.3304 23.2715C68.4 21.8274 67.0974 21.1053 65.4227 21.1053Z"
+																  fill="white"/>
+															<path d="M74.1413 23.7581C73.0964 23.7581 72.2232 24.1505 71.5075 24.9197C70.7918 25.6888 70.434 26.6463 70.434 27.7765C70.434 28.9067 70.7918 29.8642 71.5075 30.6334C72.2232 31.4025 73.0964 31.7949 74.1413 31.8106C75.1719 31.8106 76.0451 31.4182 76.7751 30.6491C77.5051 29.8642 77.8773 28.9067 77.8773 27.7765C77.8773 26.6463 77.5051 25.6888 76.7751 24.9197C76.0451 24.1505 75.1719 23.7581 74.1413 23.7581ZM74.1556 25.265C74.7711 25.2807 75.2864 25.5161 75.7015 26.0028C76.1166 26.4737 76.3314 27.0701 76.3314 27.7922C76.3314 28.4986 76.1166 29.0951 75.7015 29.5817C75.2864 30.0526 74.7568 30.288 74.1413 30.288C73.5115 30.288 72.9962 30.0526 72.5811 29.5817C72.166 29.0951 71.9656 28.4986 71.9656 27.7922C71.9656 27.0701 72.166 26.4737 72.5811 26.0028C72.9962 25.5161 73.5258 25.2807 74.1556 25.265Z"
+																  fill="white"/>
+															<path d="M82.1482 23.7581C81.1033 23.7581 80.2302 24.1505 79.5144 24.9197C78.7987 25.6888 78.4409 26.6463 78.4409 27.7765C78.4409 28.9067 78.7987 29.8642 79.5144 30.6334C80.2302 31.4025 81.1033 31.7949 82.1482 31.8106C83.1788 31.8106 84.052 31.4182 84.782 30.6491C85.512 29.8642 85.8842 28.9067 85.8842 27.7765C85.8842 26.6463 85.512 25.6888 84.782 24.9197C84.052 24.1505 83.1788 23.7581 82.1482 23.7581ZM82.1625 25.265C82.7781 25.2807 83.2934 25.5161 83.7085 26.0028C84.1236 26.4737 84.3383 27.0701 84.3383 27.7922C84.3383 28.4986 84.1236 29.0951 83.7085 29.5817C83.2934 30.0526 82.7637 30.288 82.1482 30.288C81.5184 30.288 81.0031 30.0526 80.588 29.5817C80.1729 29.0951 79.9725 28.4986 79.9725 27.7922C79.9725 27.0701 80.1729 26.4737 80.588 26.0028C81.0031 25.5161 81.5327 25.2807 82.1625 25.265Z"
+																  fill="white"/>
+															<path d="M92.4025 25.0295C91.8442 24.1819 91.014 23.7581 89.9118 23.7581C88.9242 23.7581 88.1083 24.1191 87.4641 24.8412C86.82 25.5632 86.4908 26.4894 86.4908 27.6195C86.4908 28.7497 86.82 29.6758 87.4641 30.3979C88.1083 31.12 88.9242 31.481 89.9118 31.481C90.9281 31.481 91.7154 31.12 92.288 30.3979V30.9316C92.288 32.3757 91.4577 33.1292 90.1838 33.1292C89.3679 33.1292 88.5377 32.7681 87.7218 32.0304L86.8916 33.1763C87.8363 34.1495 88.9671 34.6361 90.2697 34.6361C92.4025 34.6361 93.7909 33.2704 93.7909 30.8374V23.9308H92.4025V25.0295ZM90.1838 30.0369C89.5683 30.0369 89.0673 29.8171 88.6522 29.3776C88.2371 28.9224 88.0367 28.3416 88.0367 27.6195C88.0367 26.9132 88.2371 26.3324 88.6522 25.8929C89.0673 25.4534 89.5683 25.2336 90.1838 25.2336C91.3432 25.2336 92.3023 26.0341 92.3023 27.6038C92.3023 28.3887 92.0876 28.9852 91.6725 29.409C91.2573 29.8328 90.7707 30.0369 90.1838 30.0369Z"
+																  fill="white"/>
+															<path d="M95.2479 19.8652V31.638H96.7509V19.8652H95.2479Z"
+																  fill="white"/>
+															<path d="M104.65 27.2899C104.65 26.2696 104.335 25.4377 103.72 24.7627C103.104 24.0877 102.331 23.7581 101.401 23.7581C100.384 23.7581 99.5112 24.1505 98.8098 24.9354C98.1084 25.7045 97.7649 26.662 97.7649 27.7922C97.7649 28.9381 98.1227 29.8956 98.8384 30.6648C99.5541 31.4339 100.456 31.8106 101.544 31.8106C102.617 31.8106 103.548 31.4025 104.349 30.5706L103.634 29.4404C103.004 30.0526 102.317 30.3508 101.587 30.3508C100.37 30.3508 99.4826 29.5974 99.2965 28.3259H104.535C104.607 27.9649 104.65 27.6195 104.65 27.2899ZM101.343 25.1551C102.36 25.1551 103.133 25.8929 103.147 27.0388H99.3251C99.5541 25.8929 100.356 25.1551 101.343 25.1551Z"
+																  fill="white"/>
+															<path d="M109.053 21.278V31.638H110.57V27.6352H112.502C113.461 27.6352 114.234 27.337 114.821 26.7562C115.408 26.1597 115.709 25.3906 115.709 24.4488C115.709 23.5069 115.408 22.7378 114.821 22.157C114.234 21.5762 113.461 21.278 112.502 21.278H109.053ZM112.474 22.7535C113.547 22.7535 114.149 23.4441 114.149 24.4644C114.149 25.4848 113.547 26.1597 112.474 26.1597H110.57V22.7535H112.474Z"
+																  fill="white"/>
+															<path d="M116.582 19.8652V31.638H118.085V19.8652H116.582Z"
+																  fill="white"/>
+															<path d="M122.248 23.7581C120.974 23.7581 119.986 24.3075 119.285 25.4063L120.158 26.3795C120.745 25.6103 121.404 25.2336 122.105 25.2336C123.064 25.2336 123.608 25.8144 123.608 26.8818V27.3841H121.618C120.029 27.3841 119.027 28.2474 119.027 29.5817C119.027 30.9159 120.001 31.8106 121.475 31.8106C122.448 31.8106 123.193 31.4653 123.722 30.7746V31.638H125.125V26.976C125.125 24.904 123.98 23.7581 122.248 23.7581ZM121.79 30.5392C121.06 30.5392 120.559 30.1624 120.559 29.5189C120.559 28.891 120.974 28.5771 121.804 28.5771H123.608V28.7183C123.608 29.77 122.806 30.5392 121.79 30.5392Z"
+																  fill="white"/>
+															<path d="M129.321 29.5503L127.303 23.9308H125.685L128.491 31.2926L128.205 32.0147C127.861 32.878 127.374 33.1449 126.673 33.1449C126.559 33.1449 126.287 33.1292 125.843 33.0821V34.4791C126.229 34.589 126.616 34.6361 127.002 34.6361C128.205 34.6361 128.992 33.9768 129.579 32.517L133 23.9308H131.397L129.321 29.5503Z"
+																  fill="white"/>
+														</svg>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="row">
+						<div class="col-12">
+							© 2022 Coinpayments, Inc. All Rights Reserved. Design by
+							<a href="https://nencer.com">Nencer.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script type=" text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/select2/js/select2.min.js"></script>
+<script type="text/javascript"
+		src="./assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+</html>
