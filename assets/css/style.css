@@ -323,7 +323,7 @@ body {
     visibility: hidden;
     z-index: 3;
     right: 0;
-    width: 120px;
+    min-width: 120px;
     text-align: left;
 }
 
@@ -339,7 +339,7 @@ body {
 
 .header .header-action > ul > li.action-account > ul li a {
     padding: 4px 10px;
-    font-size: 1em;
+    font-size: 1.05em;
     border-radius: 4px;
     cursor: pointer;
     white-space: nowrap;
