@@ -2182,6 +2182,163 @@ body {
     transform: scaleY(1);
 }
 
+.page-wallet .wallet-form .form-item .group-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select {
+    padding-right: 25px !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 50px;
+    background-color: rgba(var(--secondary-rgb), .15);
+    border-radius: 6px;
+    width: 100%;
+    color: var(--theme-dark-color-white);
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    display: block;
+    line-height: 1.43em;
+    font-size: 1.4em;
+    position: relative;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select svg {
+    position: absolute;
+    top: 50%;
+    height: 6px;
+    width: 6px;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select svg * {
+    fill: var(--theme-dark-color-white);
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .coin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    height: 100%;
+    cursor: poinTer;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .coin img {
+    height: 24px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .coin .title {
+    font-size: 17px;
+    margin-left: 4px;
+    font-weight: 700;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin {
+    position: absolute;
+    z-index: 4;
+    border-radius: 5px;
+    background-color: var(--theme-dark-light-2);
+    box-shadow: 0 2px 4px rgb(185 192 200 / 41%);
+    width: 100%;
+    top: 100%;
+    right: 0;
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top;
+    transition: all 0.26s ease;
+    font-size: 15px;
+    text-align: left;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner {
+    padding: 20px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .title {
+    font-weight: 700;
+    color: var(--theme-dark-color-white);
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .image {
+    width: 30px;
+    height: 30px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .name {
+    padding-left: 15px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: var(--theme-dark-color-light);
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .name span {
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: var(--theme-dark-color-white);
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li + li {
+    margin-top: 15px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin.show {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
+
 .page-wallet .wallet-deposit_tab .nav-tabs {
     border-bottom: 0;
     margin-bottom: 30px;
@@ -2823,7 +2980,7 @@ html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner sel
 html[data-theme=light] .section-manage,
 html[data-theme=light] .section-plugins,
 html[data-theme=light] .section-community,
-html[data-theme=light] .section-page {
+html[data-theme=light] .section-page{
     background-color: var(--theme-dark-color-light-2);
     color: var(--theme-dark);
 }
@@ -2874,7 +3031,7 @@ html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .for
 html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .filter-button button,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link,
 html[data-theme=light] .tool-item .tool-item_content .tool-item_title,
-html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link{
+html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link {
     color: var(--theme-dark);
 }
 
@@ -2922,7 +3079,8 @@ html[data-theme=light] .section-community .community-inner .community-flex .comm
     color: var(--theme-dark-color-white);
 }
 
-html[data-theme=light] .section-community .community-inner .community-flex .community-item .community-item_icon svg * {
+html[data-theme=light] .section-community .community-inner .community-flex .community-item .community-item_icon svg *,
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select svg *{
     fill: var(--theme-dark-color-white) !important;
 }
 
@@ -2973,14 +3131,16 @@ html[data-theme=light] .page-wallet .wallet-deposit .deposit-qr .deposit-qr_imag
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account,
 html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active,
-html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active{
+html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
 }
 
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account:hover,
 html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .form-item_inner__select .item-selected,
-html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .form-item_inner__select .item-dropdown {
+html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .form-item_inner__select .item-dropdown,
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select,
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin{
     background-color: var(--secondary-hover);
     border-color: var(--secondary-hover);
 }
@@ -2988,7 +3148,7 @@ html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .fo
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account > a,
 html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active,
-html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active{
+html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active {
     color: var(--theme-dark-color-white);
 }
 
@@ -3051,7 +3211,7 @@ html[data-theme=light] .page-merchant .merchant-item:hover {
 }
 
 html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link:hover,
-html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link:hover{
+html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link:hover {
     color: var(--theme-dark-color-white);
     background: var(--secondary-color);
 }
@@ -3734,6 +3894,26 @@ html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .
         overflow-y: hidden;
     }
 
+    .page-wallet .wallet-form .form-item .group-item .group-select .coin .title {
+        font-size: 15px;
+    }
+
+    .page-wallet .wallet-form .form-item .group-item .group-select .coin img {
+        height: 22px;
+    }
+
+    .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .title {
+        font-size: .95em;
+    }
+
+    .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin {
+        font-size: 13px;
+    }
+
+    .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .image{
+        height: 24px;
+        width: 24px;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
