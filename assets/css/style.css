@@ -2457,18 +2457,20 @@ body {
     background: var(--theme-dark-light-2);
 }
 
-.table-theme thead tr th {
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 1em;
-}
-
 .table-theme thead tr th,
 .table-theme tbody tr td {
     padding: 12px 20px;
     border-right: 1px solid #121212;
     border-bottom: 1px solid #121212;
     line-height: 18px;
+}
+
+.table-theme thead tr th {
+    font-weight: 700;
+    padding: 20px 20px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    background: var(--secondary-color);
 }
 
 .table-theme thead tr th:last-child,
@@ -3243,7 +3245,8 @@ html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-s
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account > a,
 html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active,
-html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active {
+html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active,
+html[data-theme=light] .table-theme thead tr th{
     color: var(--theme-dark-color-white);
 }
 
