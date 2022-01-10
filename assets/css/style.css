@@ -2182,6 +2182,163 @@ body {
     transform: scaleY(1);
 }
 
+.page-wallet .wallet-form .form-item .group-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select {
+    padding-right: 25px !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 50px;
+    background-color: rgba(var(--secondary-rgb), .15);
+    border-radius: 6px;
+    width: 100%;
+    color: var(--theme-dark-color-white);
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    display: block;
+    line-height: 1.43em;
+    font-size: 1.4em;
+    position: relative;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select svg {
+    position: absolute;
+    top: 50%;
+    height: 6px;
+    width: 6px;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select svg * {
+    fill: var(--theme-dark-color-white);
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .coin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    height: 100%;
+    cursor: poinTer;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .coin img {
+    height: 24px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .coin .title {
+    font-size: 17px;
+    margin-left: 4px;
+    font-weight: 700;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin {
+    position: absolute;
+    z-index: 4;
+    border-radius: 5px;
+    background-color: var(--theme-dark-light-2);
+    box-shadow: 0 2px 4px rgb(185 192 200 / 41%);
+    width: 100%;
+    top: 100%;
+    right: 0;
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top;
+    transition: all 0.26s ease;
+    font-size: 15px;
+    text-align: left;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner {
+    padding: 20px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .title {
+    font-weight: 700;
+    color: var(--theme-dark-color-white);
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .image {
+    width: 30px;
+    height: 30px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .name {
+    padding-left: 15px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: var(--theme-dark-color-light);
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .name span {
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: var(--theme-dark-color-white);
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li + li {
+    margin-top: 15px;
+}
+
+.page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin.show {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
+
 .page-wallet .wallet-deposit_tab .nav-tabs {
     border-bottom: 0;
     margin-bottom: 30px;
@@ -2365,8 +2522,6 @@ body {
     text-transform: uppercase;
     transition: var(--transition);
     white-space: nowrap;
-    border-width: 1px;
-    border-style: solid;
 }
 
 .table-theme button [class*=table-label],
@@ -2375,58 +2530,53 @@ body {
 }
 
 .table-theme .table-label_warning {
-    color: #e9c959;
-    border-color: rgba(217, 180, 50, 1);
+    color: #D9B432;
+    background-color: rgba(217, 180, 50, .2);
 }
 
-.table-theme a .table-label_warning:hover,
-.table-theme button .table-label_warning:hover {
-    color: #fff;
-    background: rgba(217, 180, 50, 1);
+.table-theme .table-label_warning:hover {
+    color: #D9B432;
+    background-color: rgba(217, 180, 50, .5);
 }
 
 .table-theme .table-label_danger {
-    color: #f8a2af;
-    border-color: rgba(251, 123, 141, 1);
+    color: #fb7b8d;
+    background-color: rgba(251, 123, 141, .2);
 }
 
-.table-theme a .table-label_danger:hover,
-.table-theme button .table-label_danger:hover {
-    color: #fff;
-    background: rgba(251, 123, 141, 1);
+.table-theme .table-label_danger:hover {
+    color: #fb7b8d;
+    background-color: rgba(251, 123, 141, .5);
 }
 
 .table-theme .table-label_success {
-    color: #41e295;
-    border-color: rgba(33, 191, 115, 1);
+    color: #21bf73;
+    background-color: rgba(33, 191, 115, .2);
 }
 
-.table-theme a .table-label_success:hover,
-.table-theme button .table-label_success:hover {
-    color: #fff;
-    background: rgba(33, 191, 115, 1);
+.table-theme .table-label_success:hover {
+    color: #21bf73;
+    background-color: rgba(33, 191, 115, .5);
 }
 
 .table-theme .table-label_info {
-    color: #6ad9ea;
-    border-color: rgba(55, 168, 187, 1);
+    color: #37a9bb;
+    background-color: rgba(55, 168, 187, .2);
 }
 
-.table-theme a .table-label_info:hover,
-.table-theme button .table-label_info:hover {
-    color: #fff;
-    background: rgba(55, 168, 187, 1);
+.table-theme .table-label_info:hover {
+    color: #37a9bb;
+    background-color: rgba(55, 168, 187, .5);
 }
 
 .table-theme .table-label_primary {
-    color: rgb(109, 152, 238);
-    border-color: rgba(52, 99, 196, 1);
+    color: rgb(52, 99, 196);
+    background-color: rgba(52, 99, 196, 0.2);
 }
 
-.table-theme a .table-label_primary:hover,
-.table-theme button .table-label_primary:hover {
-    color: #fff;
-    background: rgba(52, 99, 196, 1);
+.table-theme .table-label_primary:hover {
+    color: rgb(52, 99, 196);
+    background-color: rgba(52, 99, 196, 0.5);
 }
 
 .table-theme [class*=table-label_payment] {
@@ -2787,85 +2937,6 @@ body {
     margin-top: 15px;
 }
 
-.toggle-switch-box {
-    border-radius: 26px;
-    display: inline-block;
-    margin: 0;
-    cursor: pointer;
-    outline: 0;
-    overflow: hidden;
-}
-
-.toggle-switch-box input {
-    display: none;
-}
-
-.toggle-switch-box .toggle-switch-item {
-    position: relative;
-    display: block;
-    min-width: 60px;
-    min-height: 24px;
-}
-
-.toggle-switch-box .toggle-switch-item .switch-button {
-    left: 5px;
-    display: block;
-    width: 15px;
-    height: 15px;
-    border: 3px solid transparent;
-    background-color: #fff;
-    border-radius: 50%;
-    z-index: 1;
-    transition: left 0.3s ease;
-    position: absolute;
-    top: 50%;
-    transform: translate3d(0, -50%, 0);
-}
-
-.toggle-switch-box .toggle-switch-item:before,
-.toggle-switch-box .toggle-switch-item:after {
-    position: absolute;
-    top: 50%;
-    transform: translate3d(0, -50%, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1;
-}
-
-.toggle-switch-box .toggle-switch-item:before {
-    left: -100%;
-    padding: 0 23px 0 0;
-    background-color: var(--primary-color);
-    content: attr(data-tg-on);
-    transition: left 0.3s ease;
-}
-
-.toggle-switch-box .toggle-switch-item::after {
-    right: 0;
-    padding: 0 0 0 23px;
-    background-color: #97989c;
-    content: attr(data-tg-off);
-    transition: right 0.3s ease;
-}
-
-.toggle-switch-box input:checked + .toggle-switch-item::before {
-    left: 0;
-}
-
-.toggle-switch-box input:checked + .toggle-switch-item::after {
-    right: -100%;
-}
-
-.toggle-switch-box input:checked + .toggle-switch-item .switch-button {
-    left: calc(100% - 20px);
-}
 
 html[data-theme=light] body {
     background-color: var(--theme-dark-color-light);
@@ -2909,7 +2980,7 @@ html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner sel
 html[data-theme=light] .section-manage,
 html[data-theme=light] .section-plugins,
 html[data-theme=light] .section-community,
-html[data-theme=light] .section-page {
+html[data-theme=light] .section-page{
     background-color: var(--theme-dark-color-light-2);
     color: var(--theme-dark);
 }
@@ -2960,7 +3031,10 @@ html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .for
 html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .filter-button button,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link,
 html[data-theme=light] .tool-item .tool-item_content .tool-item_title,
-html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link {
+html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link,
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .title,
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .name,
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .name span{
     color: var(--theme-dark);
 }
 
@@ -2990,7 +3064,8 @@ html[data-theme=light] .section-intro .intro-inner .intro-column .intro-partner 
 html[data-theme=light] .section-plugins .plugins-inner .plugins-flex .plugins-item .plugins-item_image svg *,
 html[data-theme=light] .section-download .download-inner .download-column .download-market .download-market_list .market-item .market-item_icon svg path,
 html[data-theme=light] .footer .footer-middle .footer-item .footer-app ul li a svg,
-html[data-theme=light] .header-page.header .header-action > ul > li svg {
+html[data-theme=light] .header-page.header .header-action > ul > li svg,
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select svg *{
     fill: var(--theme-dark) !important;
 }
 
@@ -3008,7 +3083,7 @@ html[data-theme=light] .section-community .community-inner .community-flex .comm
     color: var(--theme-dark-color-white);
 }
 
-html[data-theme=light] .section-community .community-inner .community-flex .community-item .community-item_icon svg * {
+html[data-theme=light] .section-community .community-inner .community-flex .community-item .community-item_icon svg *{
     fill: var(--theme-dark-color-white) !important;
 }
 
@@ -3066,11 +3141,16 @@ html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav
 
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account:hover,
 html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .form-item_inner__select .item-selected,
-html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .form-item_inner__select .item-dropdown {
+html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .form-item_inner__select .item-dropdown{
     background-color: var(--secondary-hover);
     border-color: var(--secondary-hover);
 }
 
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select,
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin {
+    background: #f5f5f5;
+    color: var(--theme-dark)
+}
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account > a,
 html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active,
@@ -3134,6 +3214,10 @@ html[data-theme=light] .page-merchant .support-item:hover {
 
 html[data-theme=light] .page-merchant .merchant-item:hover {
     box-shadow: 0 2px 5px rgb(0 0 0 / 25%);
+}
+
+html[data-theme=light] .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin {
+    box-shadow: none;
 }
 
 html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link:hover,
@@ -3820,6 +3904,26 @@ html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .
         overflow-y: hidden;
     }
 
+    .page-wallet .wallet-form .form-item .group-item .group-select .coin .title {
+        font-size: 15px;
+    }
+
+    .page-wallet .wallet-form .form-item .group-item .group-select .coin img {
+        height: 22px;
+    }
+
+    .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .title {
+        font-size: .95em;
+    }
+
+    .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin {
+        font-size: 13px;
+    }
+
+    .page-wallet .wallet-form .form-item .group-item .group-select .dropdown-coin .dropdown-coin--inner .list-coin ul li a .image{
+        height: 24px;
+        width: 24px;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {

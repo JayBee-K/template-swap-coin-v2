@@ -240,6 +240,25 @@ const copyClipBoard = function (value) {
     textareaElm.remove();
 }
 
+const callDropdownCoin = function (elm) {
+    // Update 08-01
+    let dropdown_coinElm = elm.closest('.group-item').find('.dropdown-coin');
+    if (dropdown_coinElm.hasClass('show')) {
+        dropdown_coinElm.removeClass('show');
+    } else {
+        dropdown_coinElm.addClass('show');
+    }
+}
+var changeCoin = function (elm) {
+    // Update 08-01
+    let img = elm.data('image'),
+        name = elm.data('name');
+
+    elm.parents('.form-coin .group-item').find('.call-dropdownCoin img').prop('src', img);
+    elm.parents('.form-coin .group-item').find('.call-dropdownCoin .title').text(name);
+    elm.parents('.form-coin .dropdown-coin').removeClass('show');
+}
+
 $(function () {
     switchTheme();
     navigationMobile();
@@ -252,6 +271,19 @@ $(function () {
     viewPass();
     dropdownCoin();
     chooseDropdownCoin();
+
+    // Update 08-01
+    $('.call-dropdownCoin').click(function () {
+        callDropdownCoin($(this));
+    });
+    $(document).on("mouseup", function (e) {
+        var o = $(".dropdown-coin.show");
+        o.is(e.target) || 0 !== o.has(e.target).length
+        || (o.removeClass('show'))
+    });
+    $('body').on('click', '.chooseCoin > ul > li > a', function () {
+        changeCoin($(this));
+    })
 
     $('.copyClipBoard').click(function () {
         copyClipBoard($(this).attr('data-clipboard'));
