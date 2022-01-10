@@ -2365,6 +2365,8 @@ body {
     text-transform: uppercase;
     transition: var(--transition);
     white-space: nowrap;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .table-theme button [class*=table-label],
@@ -2373,53 +2375,58 @@ body {
 }
 
 .table-theme .table-label_warning {
-    color: #D9B432;
-    background-color: rgba(217, 180, 50, .2);
+    color: #e9c959;
+    border-color: rgba(217, 180, 50, 1);
 }
 
-.table-theme .table-label_warning:hover {
-    color: #D9B432;
-    background-color: rgba(217, 180, 50, .5);
+.table-theme a .table-label_warning:hover,
+.table-theme button .table-label_warning:hover {
+    color: #fff;
+    background: rgba(217, 180, 50, 1);
 }
 
 .table-theme .table-label_danger {
-    color: #fb7b8d;
-    background-color: rgba(251, 123, 141, .2);
+    color: #f8a2af;
+    border-color: rgba(251, 123, 141, 1);
 }
 
-.table-theme .table-label_danger:hover {
-    color: #fb7b8d;
-    background-color: rgba(251, 123, 141, .5);
+.table-theme a .table-label_danger:hover,
+.table-theme button .table-label_danger:hover {
+    color: #fff;
+    background: rgba(251, 123, 141, 1);
 }
 
 .table-theme .table-label_success {
-    color: #21bf73;
-    background-color: rgba(33, 191, 115, .2);
+    color: #41e295;
+    border-color: rgba(33, 191, 115, 1);
 }
 
-.table-theme .table-label_success:hover {
-    color: #21bf73;
-    background-color: rgba(33, 191, 115, .5);
+.table-theme a .table-label_success:hover,
+.table-theme button .table-label_success:hover {
+    color: #fff;
+    background: rgba(33, 191, 115, 1);
 }
 
 .table-theme .table-label_info {
-    color: #37a9bb;
-    background-color: rgba(55, 168, 187, .2);
+    color: #6ad9ea;
+    border-color: rgba(55, 168, 187, 1);
 }
 
-.table-theme .table-label_info:hover {
-    color: #37a9bb;
-    background-color: rgba(55, 168, 187, .5);
+.table-theme a .table-label_info:hover,
+.table-theme button .table-label_info:hover {
+    color: #fff;
+    background: rgba(55, 168, 187, 1);
 }
 
 .table-theme .table-label_primary {
-    color: rgb(52, 99, 196);
-    background-color: rgba(52, 99, 196, 0.2);
+    color: rgb(109, 152, 238);
+    border-color: rgba(52, 99, 196, 1);
 }
 
-.table-theme .table-label_primary:hover {
-    color: rgb(52, 99, 196);
-    background-color: rgba(52, 99, 196, 0.5);
+.table-theme a .table-label_primary:hover,
+.table-theme button .table-label_primary:hover {
+    color: #fff;
+    background: rgba(52, 99, 196, 1);
 }
 
 .table-theme [class*=table-label_payment] {
@@ -2780,6 +2787,85 @@ body {
     margin-top: 15px;
 }
 
+.toggle-switch-box {
+    border-radius: 26px;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    outline: 0;
+    overflow: hidden;
+}
+
+.toggle-switch-box input {
+    display: none;
+}
+
+.toggle-switch-box .toggle-switch-item {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    min-height: 24px;
+}
+
+.toggle-switch-box .toggle-switch-item .switch-button {
+    left: 5px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid transparent;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    transition: left 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+}
+
+.toggle-switch-box .toggle-switch-item:before,
+.toggle-switch-box .toggle-switch-item:after {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+}
+
+.toggle-switch-box .toggle-switch-item:before {
+    left: -100%;
+    padding: 0 23px 0 0;
+    background-color: var(--primary-color);
+    content: attr(data-tg-on);
+    transition: left 0.3s ease;
+}
+
+.toggle-switch-box .toggle-switch-item::after {
+    right: 0;
+    padding: 0 0 0 23px;
+    background-color: #97989c;
+    content: attr(data-tg-off);
+    transition: right 0.3s ease;
+}
+
+.toggle-switch-box input:checked + .toggle-switch-item::before {
+    left: 0;
+}
+
+.toggle-switch-box input:checked + .toggle-switch-item::after {
+    right: -100%;
+}
+
+.toggle-switch-box input:checked + .toggle-switch-item .switch-button {
+    left: calc(100% - 20px);
+}
 
 html[data-theme=light] body {
     background-color: var(--theme-dark-color-light);
@@ -2874,7 +2960,7 @@ html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .for
 html[data-theme=light] .page-merchant .merchant-action_search .filter-inner .filter-button button,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link,
 html[data-theme=light] .tool-item .tool-item_content .tool-item_title,
-html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link{
+html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link {
     color: var(--theme-dark);
 }
 
@@ -2973,7 +3059,7 @@ html[data-theme=light] .page-wallet .wallet-deposit .deposit-qr .deposit-qr_imag
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account,
 html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active,
-html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active{
+html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
 }
@@ -2988,7 +3074,7 @@ html[data-theme=light] .page-wallet .wallet-form .form-item .form-item_inner .fo
 html[data-theme=light] .header.header-page .header-action > ul > li.action-account > a,
 html[data-theme=light] .page-wallet .wallet-inner .wallet-tab .nav-tabs .nav-item .nav-link.active,
 html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link.active,
-html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active{
+html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link.active {
     color: var(--theme-dark-color-white);
 }
 
@@ -3051,7 +3137,7 @@ html[data-theme=light] .page-merchant .merchant-item:hover {
 }
 
 html[data-theme=light] .page-wallet .wallet-deposit_tab .nav-tabs .nav-item .nav-link:hover,
-html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link:hover{
+html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .nav-link:hover {
     color: var(--theme-dark-color-white);
     background: var(--secondary-color);
 }
