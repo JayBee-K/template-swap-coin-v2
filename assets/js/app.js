@@ -259,31 +259,33 @@ var changeCoin = function (elm) {
 }
 
 const setTimeOrder = function () {
-	if ($('#setTimeOrder').length) {
-		let minuteTest = $('#setTimeOrder').find('[data-minutes]').attr('data-minutes'),
-			secondTest = $('#setTimeOrder').find('[data-seconds]').attr('data-seconds'),
-			time = `${minuteTest}:${secondTest}`;
+	if ($('.setTimeOrder').length) {
+		$('.setTimeOrder').each(function () {
+			let _this = $(this);
+			let minuteTest = _this.find('[data-minutes]').attr('data-minutes'),
+				secondTest = _this.find('[data-seconds]').attr('data-seconds'),
+				time = `${minuteTest}:${secondTest}`;
 
-		var interval = setInterval(function () {
-			var timer = time.split(':');
-			var minutes = parseInt(timer[0], 10);
-			var seconds = parseInt(timer[1], 10);
-			--seconds;
-			minutes = (seconds < 0) ? --minutes : minutes;
-			seconds = (seconds < 0) ? 59 : seconds;
-			seconds = (seconds < 10) ? '0' + seconds : seconds;
-			if (minutes < 0) {
-				clearInterval(interval);
-				$('#setTimeOrder').find('[data-minutes]').text('00');
-				$('#setTimeOrder').find('[data-seconds]').text('00');
-				time = `00:00`;
-			} else {
-				$('#setTimeOrder').find('[data-minutes]').text(`${(minutes < 10) ? '0' + minutes : minutes}`);
-				$('#setTimeOrder').find('[data-seconds]').text(seconds);
-				time = `${minutes}:${seconds}`;
-			}
-		}, 1000);
-
+			var interval = setInterval(function () {
+				var timer = time.split(':');
+				var minutes = parseInt(timer[0], 10);
+				var seconds = parseInt(timer[1], 10);
+				--seconds;
+				minutes = (seconds < 0) ? --minutes : minutes;
+				seconds = (seconds < 0) ? 59 : seconds;
+				seconds = (seconds < 10) ? '0' + seconds : seconds;
+				if (minutes < 0) {
+					clearInterval(interval);
+					_this.find('[data-minutes]').text('00');
+					_this.find('[data-seconds]').text('00');
+					time = `00:00`;
+				} else {
+					_this.find('[data-minutes]').text(`${(minutes < 10) ? '0' + minutes : minutes}`);
+					_this.find('[data-seconds]').text(seconds);
+					time = `${minutes}:${seconds}`;
+				}
+			}, 1000);
+		})
 	}
 }
 
