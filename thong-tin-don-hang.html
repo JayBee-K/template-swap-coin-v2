@@ -280,90 +280,219 @@
 	<div class="header-overlay"></div>
 </header>
 <div class="main">
-	<div class="section-page page-account">
+	<div class="section-page page-wallet">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-7">
-					<div class="account-inner">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="account-item">
-									<div class="account-heading">
-										<div class="account-title">
-											Đăng ký tài khoản Gate.io
-										</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="breadcrumb-theme">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="#">Trang chủ</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">Thông tin đơn hàng</li>
+						</ol>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-heading">
+								<h1 class="heading-title mb-0">
+									Thông tin đơn hàng
+								</h1>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="wallet-form">
+								<div class="form-item row align-items-center">
+									<label for="" class="col-md-4 mb-0">
+										Số coin:
+									</label>
+									<div class="form-item_inner col-md-8">
+										<input readonly value="500" type="text"
+											   class="form-control">
 									</div>
-									<div class="account-form">
-										<form action="">
-											<div class="row">
-												<div class="col-md-6">
-													<div class="account-form_row">
-														<div class="account-form_group">
-															<label for="email">Số điện thoại/Địa chỉ email</label>
-															<input type="text" class="form-control"
-																   name="email" id="email" required autocomplete="off">
-														</div>
-														<span class="account-form_fail">Hãy nhập số điện thoại/ email
-															tên người
-															dùng!</span>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="account-form_row">
-														<div class="account-form_group">
-															<label for="fullname">Tên đầy đủ</label>
-															<input type="text" class="form-control"
-																   name="email" id="fullname" required
-																   autocomplete="off">
-														</div>
-														<span class="account-form_fail">Hãy nhập tên đầy đủ</span>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="account-form_row">
-														<div class="account-form_group">
-															<label for="password">Mật khẩu</label>
-															<input type="password" class="form-control"
-																   name="password" id="password" required
-																   autocomplete="off">
-															<a href="javascript:void(0)" tabindex="-1"
-															   class="account-form_viewpass">
-																<i class="fas fa-eye"></i>
-															</a>
-														</div>
-														<span class="account-form_fail">Vui lòng nhập mật khẩu</span>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="account-form_row">
-														<div class="account-form_group">
-															<label for="passwordconfirm">Nhập lại mật khẩu</label>
-															<input type="password" class="form-control"
-																   name="password" id="passwordconfirm" required
-																   autocomplete="off">
-															<a href="javascript:void(0)" tabindex="-1"
-															   class="account-form_viewpass">
-																<i class="fas fa-eye"></i>
-															</a>
-														</div>
-														<span class="account-form_fail">Vui lòng nhập mật khẩu</span>
-													</div>
-												</div>
+								</div>
+								<div class="form-item row align-items-center">
+									<label for="" class="col-md-4 mb-0">
+										Loại coin
+									</label>
+									<div class="form-item_inner col-md-8">
+										<input readonly="" value="Bitcoin" type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-item row align-items-center">
+									<label for="" class="col-md-4 mb-0">
+										Số tiền cẩn thanh toán:
+									</label>
+									<div class="form-item_inner col-md-8">
+										<input value="900.000.000.000.000" readonly type="text"
+											   class="form-control">
+									</div>
+								</div>
+								<div class="form-item row align-items-center">
+									<label for="" class="col-md-4 mb-0">
+										Phí trung gian
+									</label>
+									<div class="form-item_inner col-md-8">
+										<input value="500.000" readonly type="text"
+											   class="form-control">
+									</div>
+								</div>
+								<div class="form-item row align-items-center">
+									<label for="" class="col-md-4 mb-0">
+										Thời gian tạo lệnh
+									</label>
+									<div class="form-item_inner col-md-8">
+										<input value="11:00 AM, 13-01-2022" readonly type="text"
+											   class="form-control">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 mt-md-5 mt-4">
+							<div class="section-heading">
+								<div class="heading-title mb-0">
+									Phương thức thanh toán
+								</div>
+							</div>
+							<div class="wallet-form">
+								<div class="card card-payments">
+									<div class="card-body p-0 px-md-2 px-0">
+										<div class="card-payment_item">
+											<div class="card-title">
+												Chuyển khoản
 											</div>
-											<div class="account-form_button">
-												<button type="button">
-													Đăng nhập
-												</button>
+											<ul class="list-unstyled mb-0 d-flex align-items-center justify-content-flex-start flex-wrap">
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/VCB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/TCB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/EXB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="assets/images/payments/VIB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="assets/images/payments/ACB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/VCB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/TCB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/EXB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="assets/images/payments/VIB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="assets/images/payments/ACB.webp" alt="">
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="card-payment_item">
+											<div class="card-title">
+												Thẻ ATM nội địa
 											</div>
-											<div class="account-form_field">
-												<span class="d-block text-center w-100">
-													Đã có tài khoản?
-													<a href="">
-														Đăng nhập ngay
-													</a>
-												</span>
-											</div>
-										</form>
+											<ul class="list-unstyled mb-0 d-flex align-items-center justify-content-flex-start flex-wrap">
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/VCB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/TCB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/EXB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="assets/images/payments/VIB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="assets/images/payments/ACB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/VCB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/TCB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="./assets/images/payments/EXB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="assets/images/payments/VIB.webp" alt="">
+													</div>
+												</li>
+												<li>
+													<a href="#" class="link-cover"></a>
+													<div class="payment-item_image">
+														<img src="assets/images/payments/ACB.webp" alt="">
+													</div>
+												</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>

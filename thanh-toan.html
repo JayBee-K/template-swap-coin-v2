@@ -280,95 +280,136 @@
 	<div class="header-overlay"></div>
 </header>
 <div class="main">
-	<div class="section-page page-account">
+	<div class="section-page page-wallet">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-7">
-					<div class="account-inner">
+			<div class="row">
+				<div class="col-12">
+					<div class="breadcrumb-theme">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="#">Trang chủ</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">Thanh toán đơn hàng</li>
+						</ol>
+					</div>
+				</div>
+				<div class="col-12">
+					<form action="">
 						<div class="row">
-							<div class="col-md-12">
-								<div class="account-item">
-									<div class="account-heading">
-										<div class="account-title">
-											Đăng ký tài khoản Gate.io
+							<div class="col-12">
+								<div class="section-heading">
+									<h1 class="heading-title mb-0">
+										Thanh toán đơn hàng
+									</h1>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="wallet-form">
+									<div class="card-order card">
+										<div class="card-body p-0 px-md-2 px-0">
+											<div class="card-body_detail">
+												<div class="body-detail_left">
+													<ul class="list-unstyled mb-0">
+														<li>
+															<span>Mã đơn hàng:</span>
+															<span>COIN18541</span>
+														</li>
+														<li>
+															<span>Thời gian tạo lệnh:</span>
+															<span>11:00 AM, 13-01-2022</span>
+														</li>
+														<li>
+															<span>Số coin:</span>
+															<span>500 coin</span>
+														</li>
+														<li>
+															<span>Loại coin:</span>
+															<span>Bitcoin</span>
+														</li>
+														<li>
+															<span>Thành tiền:</span>
+															<span>900.000.000.000.000 vnđ</span>
+														</li>
+														<li>
+															<span>Phí:</span>
+															<span>500.000 vnđ</span>
+														</li>
+														<li class="total">
+															<span>Tổng tiền</span>
+															<span>900.000.000.500.000 vnđ</span>
+														</li>
+													</ul>
+												</div>
+												<div class="body-detail_right mt-3 mt-md-0">
+													<div class="detail-right_content">
+														<div class="detail-image">
+															<img src="./assets/images/payments/VCB.webp" alt="">
+														</div>
+														<div class="detail-title">
+															<b>Ngân hàng thương mại cổ phần Á Châu</b>
+															<br>
+															Số tài khoản: <b>1000888999</b>
+															<br>
+															Tên tài khoản: <b>Nguyễn Văn C</b>
+														</div>
+														<div class="detail-desc">
+															Hình thức: <b>chuyển khoản ngân hàng</b>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="card-body_divider">
+												<span>Hoặc</span>
+											</div>
+											<div class="card-body_qr">
+												<div class="body-qr_item">
+													<div class="qr-item_text">
+														Quét mã QR tại đây
+													</div>
+													<div class="qr-item_image">
+														<img src="./assets/images/download/qr.png" alt="">
+													</div>
+												</div>
+												<div class="body-qr_item">
+													<div class="qr-item_text">
+														Quét mã QR tại đây
+													</div>
+													<div class="qr-item_image">
+														<img src="./assets/images/download/qr.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="card-body_button mt-5">
+												<div class="row justify-content-center">
+													<div class="col-md-4">
+														<button type="button" class="form-item_button">
+															Thanh toán
+														</button>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="account-form">
-										<form action="">
-											<div class="row">
-												<div class="col-md-6">
-													<div class="account-form_row">
-														<div class="account-form_group">
-															<label for="email">Số điện thoại/Địa chỉ email</label>
-															<input type="text" class="form-control"
-																   name="email" id="email" required autocomplete="off">
-														</div>
-														<span class="account-form_fail">Hãy nhập số điện thoại/ email
-															tên người
-															dùng!</span>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="account-form_row">
-														<div class="account-form_group">
-															<label for="fullname">Tên đầy đủ</label>
-															<input type="text" class="form-control"
-																   name="email" id="fullname" required
-																   autocomplete="off">
-														</div>
-														<span class="account-form_fail">Hãy nhập tên đầy đủ</span>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="account-form_row">
-														<div class="account-form_group">
-															<label for="password">Mật khẩu</label>
-															<input type="password" class="form-control"
-																   name="password" id="password" required
-																   autocomplete="off">
-															<a href="javascript:void(0)" tabindex="-1"
-															   class="account-form_viewpass">
-																<i class="fas fa-eye"></i>
-															</a>
-														</div>
-														<span class="account-form_fail">Vui lòng nhập mật khẩu</span>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="account-form_row">
-														<div class="account-form_group">
-															<label for="passwordconfirm">Nhập lại mật khẩu</label>
-															<input type="password" class="form-control"
-																   name="password" id="passwordconfirm" required
-																   autocomplete="off">
-															<a href="javascript:void(0)" tabindex="-1"
-															   class="account-form_viewpass">
-																<i class="fas fa-eye"></i>
-															</a>
-														</div>
-														<span class="account-form_fail">Vui lòng nhập mật khẩu</span>
-													</div>
-												</div>
-											</div>
-											<div class="account-form_button">
-												<button type="button">
-													Đăng nhập
-												</button>
-											</div>
-											<div class="account-form_field">
-												<span class="d-block text-center w-100">
-													Đã có tài khoản?
-													<a href="">
-														Đăng nhập ngay
-													</a>
-												</span>
-											</div>
-										</form>
+								</div>
+							</div>
+							<div class="col-md-3 mt-md-0 mt-4">
+								<div class="sidebar-order">
+									<div class="sidebar-title">
+										Thời gian thanh toán
+									</div>
+									<div class="sidebar-body">
+										<div class="sidebar-time" id="setTimeOrder">
+											<span data-minutes="03" class="minutes">00</span>
+											<span data-seconds="00" class="seconds">00</span>
+										</div>
+										<div class="sidebar-desc">
+											Vui lòng lưu ý thời gian thanh toán, khi hết thời gian thanh toán, quý khách bắt buộc phải quay lại lựa chọn coin và giao dịch coin
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
