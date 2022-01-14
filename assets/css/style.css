@@ -3065,6 +3065,7 @@ body {
     border: 1px solid #e9e9e9;
     border-radius: 4px;
     margin-top: 15px;
+    color: var(--theme-dark);
 }
 
 .page-order .page-order_inner .order-inner_item .order-inner_list .order-list_item {
@@ -3154,6 +3155,16 @@ body {
 .page-order .page-order_inner .order-inner_item .order-inner_coin .order-coin_item > a:hover {
     background: #edeff0;
     border-color: #a9a9a9;
+}
+
+.page-order .page-order_logo {
+    margin-bottom: 30px;
+}
+
+.page-order .page-order_logo img {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -3334,6 +3345,15 @@ body {
 .page-payment .payment-inner .payment-inner_content .inner-content_top .inner-content_qr img {
     width: 100%;
     height: auto;
+    max-width: 100%;
+}
+.page-payment .page-payment_logo {
+    margin-bottom: 30px;
+}
+
+.page-payment .page-payment_logo img {
+    height: 50px;
+    width: auto;
     max-width: 100%;
 }
 
