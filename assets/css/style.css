@@ -2721,7 +2721,7 @@ body {
     border: 2px solid transparent;
     text-align: center;
     transition: var(--transition);
-    min-height: 430px;
+    min-height: 400px;
 }
 
 .page-merchant .merchant-item:hover {
@@ -2755,7 +2755,7 @@ body {
 }
 
 .page-merchant .merchant-item .merchant-item_link {
-    margin-top: auto;
+    /*margin-top: auto;*/
 }
 
 .page-merchant .merchant-item .merchant-item_link > a {
@@ -2773,8 +2773,47 @@ body {
     transition: var(--transition);
 }
 
+.page-merchant .merchant-item .merchant-item_link > a[aria-expanded=true] {
+    display: none;
+}
+
 .page-merchant .merchant-item .merchant-item_link > a:hover {
     background: var(--primary-hover);
+}
+
+.page-merchant .merchant-item .merchant-item_collapse {
+    text-align: left;
+}
+
+.page-merchant .merchant-item .merchant-item_collapse li + li {
+    margin-top: 4px;
+}
+
+.page-merchant .merchant-item .merchant-item_collapse li a {
+    font-size: 1.05em;
+    color: var(--theme-dark-color-light);
+    font-weight: 600;
+}
+
+.page-merchant .merchant-item .merchant-item_collapse li a:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: var(--theme-dark-color-light);
+    position: relative;
+    top: -2px;
+    transition: var(--transition);
+}
+
+.page-merchant .merchant-item .merchant-item_collapse li a:hover {
+    color: var(--theme-dark-color-white);
+}
+
+.page-merchant .merchant-item .merchant-item_collapse li a:hover:before {
+    background-color: var(--theme-dark-color-white);
 }
 
 .page-merchant .support-item {
@@ -3347,6 +3386,7 @@ body {
     height: auto;
     max-width: 100%;
 }
+
 .page-payment .page-payment_logo {
     margin-bottom: 30px;
 }
@@ -3666,6 +3706,21 @@ html[data-theme=light] .page-merchant .merchant-action_tab .nav-tabs .nav-item .
     background: var(--secondary-color);
 }
 
+html[data-theme=light] .page-merchant .merchant-item .merchant-item_collapse li a {
+    color: var(--theme-dark);
+}
+
+html[data-theme=light] .page-merchant .merchant-item .merchant-item_collapse li a:before {
+    background-color: var(--theme-dark);
+}
+
+html[data-theme=light] .page-merchant .merchant-item .merchant-item_collapse li a:hover {
+    color: var(--secondary-color);
+}
+
+html[data-theme=light] .page-merchant .merchant-item .merchant-item_collapse li a:hover:before {
+    background-color: var(--secondary-color);
+}
 
 @media screen and (max-width: 1199px) {
     .section-download .download-inner .download-inner_image {
