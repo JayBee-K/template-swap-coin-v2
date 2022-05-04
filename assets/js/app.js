@@ -320,4 +320,6 @@ $(function () {
 		copyClipBoard($(this).attr('data-clipboard'));
 	});
 
+	/* Update 04-05 */
+	$('[data-toggle=tooltip]').tooltip();
 });
